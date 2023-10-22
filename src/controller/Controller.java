@@ -13,13 +13,13 @@ public class Controller {
         this.repo = repo;
     }
 
-    public PrgState oneStep(PrgState state) throws AppException {
+    public void oneStep(PrgState state) throws AppException {
         IGenericStack<IStatement> stk = state.getExeStack();
         if (stk.isEmpty()) {
             throw new AppException("Program State stack is empty");
         }
         IStatement crtStmt = stk.pop();
-        return crtStmt.execute(state);
+        crtStmt.execute(state);
     }
 
     public void executeAllSteps() throws AppException {
