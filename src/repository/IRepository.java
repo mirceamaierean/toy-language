@@ -8,5 +8,7 @@ public interface IRepository {
 
     void add(PrgState e);
 
+    void logProgramState();
+
     void clear();
 }

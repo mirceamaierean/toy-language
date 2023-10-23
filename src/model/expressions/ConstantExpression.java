@@ -19,5 +19,4 @@ public class ConstantExpression implements IExpression {
     public String toString() {
         return value.toString();
     }
-
-};
+}

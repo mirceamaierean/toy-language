@@ -15,6 +15,7 @@ import model.expressions.IExpression;
 import model.expressions.VariableExpression;
 import model.values.BooleanValue;
 import model.values.IntegerValue;
+import model.values.StringValue;
 import utils.IntegerReference;
 
 import java.util.ArrayList;
@@ -85,6 +86,31 @@ public class ExpressionParser {
         throw new WrongMatchAppException("No boolean here");
     }
 
+    private static String extractString(String string, IntegerReference position) throws WrongMatchAppException {
+        skipWhiteSpace(string, position);
+
+        // check if we have a string, if not throw an exception
+        // a string is invalid if it does not start with a quote, or if it does not end with a quote
+        if (position.getValue() >= string.length() || string.charAt(position.getValue()) != '"')
+            throw new WrongMatchAppException("No string here");
+
+        position.increase(1);
+        StringBuilder answer = new StringBuilder();
+
+        // extract the string
+        while (position.getValue() < string.length() && string.charAt(position.getValue()) != '"') {
+            answer.append(string.charAt(position.getValue()));
+            position.increase(1);
+        }
+
+        // check if we have a string, if not throw an exception
+        if (position.getValue() >= string.length() || string.charAt(position.getValue()) != '"')
+            throw new WrongMatchAppException("No string here");
+
+        position.increase(1);
+        return answer.toString();
+    }
+
     private static String extractName(String string, IntegerReference position) throws InvalidExpressionAppException {
         skipWhiteSpace(string, position);
 
@@ -120,6 +146,7 @@ public class ExpressionParser {
 
     private static IExpression extractTerm(String string, IntegerReference position) throws InvalidExpressionAppException {
         skipWhiteSpace(string, position);
+
         // check if we have a parenthesis
         if (string.charAt(position.getValue()) == '(') {
             position.increase(1);
@@ -136,6 +163,7 @@ public class ExpressionParser {
             return tmp;
         }
 
+
         try {
             return new ConstantExpression(new BooleanValue(extractBoolean(string, position)));
         } catch (WrongMatchAppException ignored) {
@@ -143,6 +171,11 @@ public class ExpressionParser {
 
         try {
             return new ConstantExpression(new IntegerValue(extractInteger(string, position)));
+        } catch (WrongMatchAppException ignored) {
+        }
+
+        try {
+            return new ConstantExpression(new StringValue(extractString(string, position)));
         } catch (WrongMatchAppException ignored) {
         }
 

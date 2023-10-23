@@ -25,9 +25,9 @@ public class IntegerValue implements IValue {
     }
 
     private IntegerValue divide(IntegerValue other) throws DivisionOverflowAppException {
-        if (other.value == 0) {
+        if (other.value == 0)
             throw new DivisionOverflowAppException("DivisionOverflowAppException: Cannot divide by 0");
-        }
+
         return new IntegerValue(this.value / other.value);
     }
 
@@ -97,9 +97,9 @@ public class IntegerValue implements IValue {
 
     @Override
     public boolean equals(IValue other) {
-        if (other.getType() instanceof IntegerType) {
+        if (other.getType() instanceof IntegerType)
             return this.getValue() == ((IntegerValue) other).getValue();
-        }
+
         return false;
     }
 

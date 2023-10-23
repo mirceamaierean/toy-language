@@ -1,5 +1,5 @@
 package view;
 
-public interface IView {
+public interface IMainView {
     void run();
 }
