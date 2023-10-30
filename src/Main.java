@@ -79,6 +79,7 @@ public class Main {
         // StringType s="salut";print(s);
         // IntegerType v;v=2;print(v);
         // IntegerType a;a = 2 + 3 * 5;IntegerType b;b = a - (4 * (9 / 2) + 23) / 2 + 7;print(b);
+        // IntegerType a;IntegerType b;a=10;b=5;if a<b then print(a);else print(b);
         // BooleanType a;a=true;BooleanType b;b=true;IntegerType v;if a then if b then v=2213;else v=23112;else v=321312;print(v);
         View view = new View();
         view.run();
