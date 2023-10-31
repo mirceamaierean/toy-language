@@ -1,39 +1,55 @@
 package controller;
 
-import model.adt.stack.IGenericStack;
+import model.adt.stack.StackEmptyAppException;
 import model.exceptions.AppException;
-import model.state.PrgState;
+import model.state.*;
 import model.statements.IStatement;
+import model.statements.NoOperationStatement;
 import repository.IRepository;
+import repository.Repository;
+
 
 public class Controller {
-    private IRepository repo;
+    IRepository repository;
+    Boolean displayFlag;
 
-    public Controller(IRepository repo) {
-        this.repo = repo;
+    public Controller() {
+        this.repository = new Repository();
+        displayFlag = true;
     }
 
-    public void oneStep(PrgState state) throws AppException {
-        IGenericStack<IStatement> stk = state.getExeStack();
-        if (stk.isEmpty()) {
-            throw new AppException("Program State stack is empty");
-        }
-        IStatement crtStmt = stk.pop();
-        crtStmt.execute(state);
+    public void changeDisplayFlag() {
+        System.out.println("Display flag changed to " + !this.displayFlag);
+        this.displayFlag = !this.displayFlag;
     }
 
-    public void executeAllSteps() throws AppException {
-        PrgState prg = repo.getCrtPrg();
-        System.out.println(prg);
+    public void oneStep() throws AppException{
+        PrgState state = repository.getCrtPrg();
+        IStatement statement = state.getExeStack().pop();
+        statement.execute(state);
+    }
 
-        while (true)
-        {
+    public void executeAllSteps() throws AppException{
+        while (true) {
             try {
-                oneStep(prg);
-                System.out.println(prg);
-            } catch (AppException e) {
+                if (this.displayFlag)
+                    this.displayCurrentState();
+                this.oneStep();
+            } catch (StackEmptyAppException exception) {
                 break;
+            } catch (AppException exception) {
+                this.setProgram(new NoOperationStatement());
+                throw exception;
             }
         }
+    }
+
+    public void displayCurrentState() throws AppException {
+        System.out.println(this.repository.getCrtPrg().toString() + "\n");
+    }
+
+    public void setProgram(IStatement statement) throws AppException {
+        this.repository.clear();
+        this.repository.add(new PrgState(new ExecutionStack(), new SymTable(), new Output(), statement));
     }
 }

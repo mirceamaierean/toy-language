@@ -4,14 +4,14 @@ import model.exceptions.AppException;
 import model.state.PrgState;
 
 import java.util.List;
-import java.util.LinkedList;
+import java.util.ArrayList;
 
 public class Repository implements IRepository{
 
     private List<PrgState>  repo;
 
     public Repository() {
-        this.repo = new LinkedList <PrgState>();
+        this.repo = new ArrayList <>();
     }
 
     @Override
@@ -27,9 +27,17 @@ public class Repository implements IRepository{
     }
 
     @Override
+    public void clear() {
+        this.repo.clear();
+    }
+
+    @Override
     public String toString() {
+        String result = "";
+        for (PrgState p : this.repo)
+            result += p.toString() + "\n";
         return "Repository{" +
-                "repo=" + repo +
+                "repo=" + result +
                 '}';
     }
 }

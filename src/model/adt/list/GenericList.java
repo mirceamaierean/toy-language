@@ -7,7 +7,7 @@ public class GenericList<T> implements IGenericList<T>{
     private List<T> output;
 
     public GenericList() {
-        output = new LinkedList<T>();
+        output = new LinkedList<>();
     }
 
     @Override
@@ -22,12 +22,17 @@ public class GenericList<T> implements IGenericList<T>{
 
     @Override
     public String toString() {
+        StringBuilder result = new StringBuilder();
+        for(T element : output){
+            result.append(element.toString()).append("\n");
+        }
         return "GenericList{" +
-                "output=" + output +
+                "output = " + result +
                 '}';
     }
 
-    public List getOutput() {
+    @Override
+    public List<T> getAll() {
         return output;
     }
 

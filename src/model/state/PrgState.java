@@ -1,54 +1,33 @@
 package model.state;
 
-import model.adt.dictionary.IGenericDictionary;
-import model.adt.list.IGenericList;
-import model.adt.stack.IGenericStack;
 import model.statements.IStatement;
-import model.values.IValue;
 
 public class PrgState {
-    IGenericStack <IStatement> exeStack;
-    IGenericDictionary <String, IValue> symTable;
-    IGenericList <IValue> out;
+    IExecutionStack executionStack;
+    ISymTable symTable;
+    IOutput output;
 
-    public PrgState(IGenericStack <IStatement> exeStack, IGenericDictionary <String, IValue> symTable, IGenericList <IValue> out, IStatement prg) {
-        this.exeStack = exeStack;
+    public PrgState(IExecutionStack executionStack, ISymTable symTable, IOutput output, IStatement statement){
+        this.executionStack = executionStack;
         this.symTable = symTable;
-        this.out = out;
-
-        this.exeStack.push(prg);
+        this.output = output;
+        this.executionStack.push(statement);
     }
 
-    public IGenericStack <IStatement> getExeStack() {
-        return exeStack;
+    public IExecutionStack getExeStack() {
+        return executionStack;
     }
 
-    public void setExeStack(IGenericStack<IStatement> exeStack) {
-        this.exeStack = exeStack;
+    public ISymTable getSymTable() {
+        return symTable;
     }
 
-    public IGenericList <IValue> getOut() {
-        return this.out;
-    }
-
-    public void setOut(IGenericList <IValue> out) {
-        this.out = out;
-    }
-
-    public IGenericDictionary <String, IValue> getSymTable() {
-        return this.symTable;
-    }
-
-    public void setSymTable(IGenericDictionary <String, IValue> symTable) {
-        this.symTable = symTable;
+    public IOutput getOutput() {
+        return output;
     }
 
     @Override
     public String toString() {
-        return "PrgState{" +
-                "exeStack=" + exeStack +
-                ", symTable=" + symTable +
-                ", out=" + out +
-                '}';
+        return this.executionStack.toString().strip() + "\n" + this.symTable.toString().strip() + "\n" + this.output.toString().strip();
     }
-}
+};
