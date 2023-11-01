@@ -16,14 +16,14 @@ public class GenericStack<T> implements IGenericStack<T> {
 
     @Override
     public T pop() throws StackEmptyAppException {
-        if(this.stack.isEmpty())
+        if (this.stack.isEmpty())
             throw new StackEmptyAppException("Stack is empty");
         return this.stack.pop();
     }
 
     @Override
     public T top() throws StackEmptyAppException {
-        if(this.stack.isEmpty())
+        if (this.stack.isEmpty())
             throw new StackEmptyAppException("Stack is empty");
         return this.stack.peek();
     }

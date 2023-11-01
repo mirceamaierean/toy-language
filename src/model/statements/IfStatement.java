@@ -7,7 +7,7 @@ import model.values.BooleanValue;
 import model.values.IValue;
 import model.values.types.BooleanType;
 
-public class IfStatement implements  IStatement{
+public class IfStatement implements IStatement {
     IExpression expression;
     IStatement left;
     IStatement right;
@@ -21,17 +21,17 @@ public class IfStatement implements  IStatement{
     @Override
     public void execute(PrgState state) throws AppException {
         IValue value = expression.evaluate(state);
-        if(!(value.getType() instanceof BooleanType)) {
+        if (!(value.getType() instanceof BooleanType)) {
             throw new AppException("Invalid expression value for if statement");
         }
-        if (((BooleanValue)value).getValue())
+        if (((BooleanValue) value).getValue())
             state.getExeStack().push(left);
         else
             state.getExeStack().push(right);
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return "if(" + this.expression.toString() + ")" + "then {" + this.left.toString() + "} else {" + this.right.toString() + "}";
     }
 }

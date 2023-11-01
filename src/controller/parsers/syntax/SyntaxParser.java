@@ -32,10 +32,11 @@ public class SyntaxParser {
     private static final Pattern namePattern = Pattern.compile("^(([a-zA-Z_])+[a-zA-Z0-9_]*)");
 
     private static void skipWhiteSpace(String string, IntegerReference position) {
-        while(position.getValue() < string.length() && Arrays.asList(whiteSpace).contains(string.charAt(position.getValue()))){
+        while (position.getValue() < string.length() && Arrays.asList(whiteSpace).contains(string.charAt(position.getValue()))) {
             position.increase(1);
         }
     }
+
     private static IType extractType(String string, IntegerReference position) throws SyntaxAppException {
         // check and find match for the type, the options are IntegerType and BooleanType
         for (IType type : types) {
@@ -195,7 +196,7 @@ public class SyntaxParser {
         if (string.charAt(position.getValue()) == '{') {
             position.increase(1);
             IStatement statement = parseAtPosition(string, position);
-            if(string.charAt(position.getValue()) != '}')
+            if (string.charAt(position.getValue()) != '}')
                 throw new SyntaxAppException("Invalid syntax");
             position.increase(1);
             return statement;
@@ -237,7 +238,7 @@ public class SyntaxParser {
     private static IStatement parseNoOperation(String string, IntegerReference position) throws SyntaxAppException {
         skipWhiteSpace(string, position);
 
-        if(position.getValue() >= string.length())
+        if (position.getValue() >= string.length())
             throw new SyntaxAppException("Invalid NOP statement");
 
         position.increase(1);
@@ -247,7 +248,7 @@ public class SyntaxParser {
     private static IStatement parseAtPosition(String string, IntegerReference position) throws SyntaxAppException, InvalidExpressionAppException {
         skipWhiteSpace(string, position);
 
-        if(position.getValue() >= string.length())
+        if (position.getValue() >= string.length())
             return null;
 
         if (position.getValue() < string.length() && string.charAt(position.getValue()) == '}')
@@ -258,7 +259,7 @@ public class SyntaxParser {
         skipWhiteSpace(string, position);
         IStatement nextStatement = parseAtPosition(string, position);
 
-        if(nextStatement == null)
+        if (nextStatement == null)
             return currentStatement;
 
         currentStatement = new CompositeStatement(currentStatement, nextStatement);

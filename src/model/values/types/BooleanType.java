@@ -3,7 +3,7 @@ package model.values.types;
 import model.values.BooleanValue;
 import model.values.IValue;
 
-public class BooleanType implements IType{
+public class BooleanType implements IType {
     @Override
     public IValue getDefaultValue() {
         return new BooleanValue(false);

@@ -1,6 +1,5 @@
 package model.expressions;
 
-import model.exceptions.AppException;
 import model.state.PrgState;
 import model.values.IValue;
 
@@ -17,7 +16,7 @@ public class ConstantExpression implements IExpression {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return value.toString();
     }
 

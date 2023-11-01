@@ -9,7 +9,7 @@ import repository.IRepository;
 import repository.Repository;
 
 
-public class Controller {
+public class Controller implements IController {
     IRepository repository;
     Boolean displayFlag;
 
@@ -23,13 +23,15 @@ public class Controller {
         this.displayFlag = !this.displayFlag;
     }
 
-    public void oneStep() throws AppException{
+    @Override
+    public void oneStep() throws AppException {
         PrgState state = repository.getCrtPrg();
         IStatement statement = state.getExeStack().pop();
         statement.execute(state);
     }
 
-    public void executeAllSteps() throws AppException{
+    @Override
+    public void executeAllSteps() throws AppException {
         while (true) {
             try {
                 if (this.displayFlag)
@@ -44,10 +46,12 @@ public class Controller {
         }
     }
 
+    @Override
     public void displayCurrentState() throws AppException {
         System.out.println(this.repository.getCrtPrg().toString() + "\n");
     }
 
+    @Override
     public void setProgram(IStatement statement) throws AppException {
         this.repository.clear();
         this.repository.add(new PrgState(new ExecutionStack(), new SymTable(), new Output(), statement));

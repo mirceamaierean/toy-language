@@ -4,7 +4,7 @@ import model.exceptions.AppException;
 import model.state.PrgState;
 import model.values.IValue;
 
-public class VariableExpression implements IExpression{
+public class VariableExpression implements IExpression {
     String name;
 
     public VariableExpression(String name) {
@@ -17,7 +17,7 @@ public class VariableExpression implements IExpression{
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return name;
     }
 

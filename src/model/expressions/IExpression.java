@@ -6,5 +6,6 @@ import model.values.IValue;
 
 public interface IExpression {
     IValue evaluate(PrgState state) throws AppException;
+
     String toString();
 }

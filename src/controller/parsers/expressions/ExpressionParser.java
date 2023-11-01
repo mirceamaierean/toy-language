@@ -26,11 +26,13 @@ import static java.lang.Math.max;
 public class ExpressionParser {
 
     private static final Character[] whiteSpace = {' ', '\t', '\n', '\r'};
+
     private static void skipWhiteSpace(String string, IntegerReference position) {
         // skip white space, tabs, new lines
         while (position.getValue() < string.length() && Arrays.asList(whiteSpace).contains(string.charAt(position.getValue())))
             position.increase(1);
     }
+
     private static int extractInteger(String string, IntegerReference position) throws WrongMatchAppException {
         skipWhiteSpace(string, position);
         int pos = position.getValue();
@@ -119,13 +121,13 @@ public class ExpressionParser {
     private static IExpression extractTerm(String string, IntegerReference position) throws InvalidExpressionAppException {
         skipWhiteSpace(string, position);
         // check if we have a parenthesis
-        if(string.charAt(position.getValue()) == '(') {
+        if (string.charAt(position.getValue()) == '(') {
             position.increase(1);
 
             IExpression tmp = parseAtPositionWithOperator(string, position, 0);
 
             // check if we have a closing parenthesis
-            if (position.getValue() >= string.length() ||  string.charAt(position.getValue()) != ')')
+            if (position.getValue() >= string.length() || string.charAt(position.getValue()) != ')')
                 throw new InvalidExpressionAppException("Expression is invalid, unbalanced parenthesis");
 
 
@@ -136,11 +138,13 @@ public class ExpressionParser {
 
         try {
             return new ConstantExpression(new BooleanValue(extractBoolean(string, position)));
-        } catch (WrongMatchAppException ignored) { }
+        } catch (WrongMatchAppException ignored) {
+        }
 
         try {
             return new ConstantExpression(new IntegerValue(extractInteger(string, position)));
-        } catch (WrongMatchAppException ignored) { }
+        } catch (WrongMatchAppException ignored) {
+        }
 
 
         return new VariableExpression(extractName(string, position));
@@ -156,7 +160,7 @@ public class ExpressionParser {
         List<String> operators = new ArrayList<>();
         int minLength = -1;
         int maxLength = -1;
-        for (String operator: currentOperators) {
+        for (String operator : currentOperators) {
             operators.add(operator);
             maxLength = max(maxLength, operator.length());
 
@@ -166,12 +170,12 @@ public class ExpressionParser {
         }
 
         // check if we have an operator
-        for(int length = minLength; length <= maxLength; ++length) {
+        for (int length = minLength; length <= maxLength; ++length) {
             if (position.getValue() + length - 1 >= string.length())
                 break;
 
             // check if we have an operator of length "length"
-            if (operators.contains(string.substring(position.getValue(), position.getValue() + length))){
+            if (operators.contains(string.substring(position.getValue(), position.getValue() + length))) {
                 position.increase(length);
                 return string.substring(position.getValue() - length, position.getValue());
             }
@@ -192,7 +196,7 @@ public class ExpressionParser {
 
         IExpression currentExpression = parseAtPositionWithOperator(string, position, currentOperator + 1);
 
-        if(currentExpression == null)
+        if (currentExpression == null)
             throw new InvalidExpressionAppException("Something wrong happened");
 
         while (position.getValue() < string.length()) {
@@ -210,7 +214,7 @@ public class ExpressionParser {
         return parseAtPositionWithOperator(string, position, 0);
     }
 
-    public static  IExpression parse(String string) throws InvalidExpressionAppException {
+    public static IExpression parse(String string) throws InvalidExpressionAppException {
         return parseAtPositionWithOperator(string, new IntegerReference(0), 0);
     }
 }

@@ -2,7 +2,7 @@ package model.statements;
 
 import model.state.PrgState;
 
-public class CompositeStatement implements IStatement{
+public class CompositeStatement implements IStatement {
     IStatement firstStatement;
     IStatement secondStatement;
 
@@ -18,7 +18,7 @@ public class CompositeStatement implements IStatement{
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return firstStatement + "; " + secondStatement;
     }
 }

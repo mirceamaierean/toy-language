@@ -7,7 +7,7 @@ public class PrgState {
     ISymTable symTable;
     IOutput output;
 
-    public PrgState(IExecutionStack executionStack, ISymTable symTable, IOutput output, IStatement statement){
+    public PrgState(IExecutionStack executionStack, ISymTable symTable, IOutput output, IStatement statement) {
         this.executionStack = executionStack;
         this.symTable = symTable;
         this.output = output;

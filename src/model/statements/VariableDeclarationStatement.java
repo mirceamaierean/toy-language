@@ -4,7 +4,7 @@ import model.state.PrgState;
 import model.state.exceptions.SymbolAlreadyExistsAppException;
 import model.values.types.IType;
 
-public class VariableDeclarationStatement implements IStatement{
+public class VariableDeclarationStatement implements IStatement {
     String name;
     IType type;
 
@@ -12,13 +12,14 @@ public class VariableDeclarationStatement implements IStatement{
         this.name = name;
         this.type = type;
     }
+
     @Override
     public void execute(PrgState state) throws SymbolAlreadyExistsAppException {
         state.getSymTable().declValue(name, type);
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return type.toString() + " " + name;
     }
 }

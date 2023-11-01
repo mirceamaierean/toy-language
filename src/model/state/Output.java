@@ -5,7 +5,7 @@ import model.adt.list.IGenericList;
 
 import java.util.List;
 
-public class Output implements  IOutput{
+public class Output implements IOutput {
     IGenericList<String> data;
 
     public Output() {
@@ -20,7 +20,7 @@ public class Output implements  IOutput{
     @Override
     public String getOutput() {
         StringBuilder answer = new StringBuilder();
-        for(String elem:this.data.getAll()){
+        for (String elem : this.data.getAll()) {
             answer.append(elem);
         }
         return answer.toString();

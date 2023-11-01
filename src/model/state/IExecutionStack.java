@@ -5,8 +5,12 @@ import model.statements.IStatement;
 
 public interface IExecutionStack {
     IStatement pop() throws StackEmptyAppException;
+
     void push(IStatement statement);
+
     boolean empty();
+
     int size();
+
     String toString();
 }

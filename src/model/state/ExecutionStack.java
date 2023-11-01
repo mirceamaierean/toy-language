@@ -37,15 +37,15 @@ public class ExecutionStack implements IExecutionStack {
     public String toString() {
         StringBuilder answer = new StringBuilder("Execution stack:\n");
         IGenericStack<IStatement> tmpStack = new GenericStack<>();
-        try{
-            while(!stack.isEmpty()){
+        try {
+            while (!stack.isEmpty()) {
                 tmpStack.push(stack.pop());
                 answer.append(tmpStack.top().toString()).append('\n');
             }
-            while(!tmpStack.isEmpty()){
+            while (!tmpStack.isEmpty()) {
                 stack.push(tmpStack.pop());
             }
-        }catch (AppException exception){
+        } catch (AppException exception) {
             throw new RuntimeException(exception.getMessage());
         }
         return answer.toString();

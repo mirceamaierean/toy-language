@@ -7,6 +7,7 @@ import java.util.Map;
 
 public class GenericDictionary<K, V> implements IGenericDictionary<K, V> {
     private Map<K, V> map;
+
     public GenericDictionary() {
         map = new HashMap<>();
     }
@@ -23,7 +24,7 @@ public class GenericDictionary<K, V> implements IGenericDictionary<K, V> {
 
     @Override
     public V lookup(K key) throws KeyNotFoundAppException {
-        if(!map.containsKey(key)){
+        if (!map.containsKey(key)) {
             throw new KeyNotFoundAppException("Key " + key.toString() + " not found.");
         }
         return map.get(key);
@@ -31,7 +32,7 @@ public class GenericDictionary<K, V> implements IGenericDictionary<K, V> {
 
     @Override
     public void delete(K key) throws KeyNotFoundAppException {
-        if(!map.containsKey(key)){
+        if (!map.containsKey(key)) {
             throw new KeyNotFoundAppException("Key " + key.toString() + " not found.");
         }
         map.remove(key);
@@ -45,7 +46,7 @@ public class GenericDictionary<K, V> implements IGenericDictionary<K, V> {
     @Override
     public String toString() {
         StringBuilder result = new StringBuilder();
-        for(K key : map.keySet()){
+        for (K key : map.keySet()) {
             result.append(key.toString()).append(" -> ").append(map.get(key).toString()).append("\n");
         }
         return "GenericDictionary{" +

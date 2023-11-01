@@ -21,7 +21,7 @@ public class BinaryExpression implements IExpression {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return "(" + left.toString() + " " + operator + " " + right.toString() + ")";
     }
 }

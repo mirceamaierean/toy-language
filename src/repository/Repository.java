@@ -6,12 +6,12 @@ import model.state.PrgState;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Repository implements IRepository{
+public class Repository implements IRepository {
 
-    private List<PrgState>  repo;
+    private List<PrgState> repo;
 
     public Repository() {
-        this.repo = new ArrayList <>();
+        this.repo = new ArrayList<>();
     }
 
     @Override

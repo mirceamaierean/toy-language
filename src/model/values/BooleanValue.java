@@ -4,11 +4,10 @@ import model.values.exceptions.InvalidOperationAppException;
 import model.values.types.BooleanType;
 import model.values.types.IType;
 
-public class BooleanValue implements IValue{
+public class BooleanValue implements IValue {
     boolean value;
 
-
-    public BooleanValue(boolean value){
+    public BooleanValue(boolean value) {
         this.value = value;
     }
 
@@ -20,29 +19,33 @@ public class BooleanValue implements IValue{
         return new BooleanValue(this.value | other.value);
     }
 
-
     private BooleanValue equal(BooleanValue other) {
         return new BooleanValue(this.equals(other));
     }
+
     private BooleanValue notEqual(BooleanValue other) {
         return new BooleanValue(!this.equals(other));
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return Boolean.toString(value);
     }
 
     @Override
     public IValue compose(IValue other, String operation) throws InvalidOperationAppException {
-        if(!(other.getType() instanceof BooleanType)) {
+        if (!(other.getType() instanceof BooleanType)) {
             throw new InvalidOperationAppException("InvalidOperationAppException: Cannot compose two different types using operation " + operation);
         }
-        switch(operation){
-            case "and": return this.and((BooleanValue) other);
-            case "or":  return this.or((BooleanValue) other);
-            case "==":  return this.equal((BooleanValue) other);
-            case "!=":  return this.notEqual((BooleanValue) other);
+        switch (operation) {
+            case "and":
+                return this.and((BooleanValue) other);
+            case "or":
+                return this.or((BooleanValue) other);
+            case "==":
+                return this.equal((BooleanValue) other);
+            case "!=":
+                return this.notEqual((BooleanValue) other);
         }
         throw new InvalidOperationAppException("InvalidOperationAppException: Cannot compose two BooleanValue types using operation " + operation);
     }
@@ -53,14 +56,14 @@ public class BooleanValue implements IValue{
     }
 
     @Override
-    public boolean equals(IValue other){
-        if(other.getType() instanceof BooleanType){
-            return this.getValue() == ((BooleanValue)other).getValue();
+    public boolean equals(IValue other) {
+        if (other.getType() instanceof BooleanType) {
+            return this.getValue() == ((BooleanValue) other).getValue();
         }
         return false;
     }
 
-    public boolean getValue(){
+    public boolean getValue() {
         return this.value;
     }
 }
