@@ -9,6 +9,8 @@ import model.state.exceptions.SymbolNotFoundAppException;
 import model.values.IValue;
 import model.values.types.IType;
 
+import java.util.Map;
+
 public class SymTable implements ISymTable {
     IGenericDictionary<String, IValue> data;
 
@@ -34,10 +36,13 @@ public class SymTable implements ISymTable {
     }
 
     @Override
-    public void setValue(String name, IValue value) throws SymbolNotFoundAppException {
-        if (!data.exists(name)) {
+    public void setValue(String name, IValue value) throws SymbolNotFoundAppException, KeyNotFoundAppException {
+        if (!data.exists(name))
             throw new SymbolNotFoundAppException("Symbol " + name + " not found.");
-        }
+
+        if (!data.lookup(name).getType().equals(value.getType()))
+            throw new SymbolNotFoundAppException("Symbol " + name + " does not have the same type as new value.");
+
         data.insert(name, value);
     }
 
@@ -52,5 +57,9 @@ public class SymTable implements ISymTable {
             throw new RuntimeException(exception.getMessage());
         }
         return answer.toString();
+    }
+
+    public Map<String, IValue> getMap() {
+        return this.data.getMap();
     }
 }

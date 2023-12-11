@@ -53,7 +53,7 @@ public class GenericDictionary<K, V> implements IGenericDictionary<K, V> {
                 "map=" + result +
                 '}';
     }
-
+    @Override
     public Map<K, V> getMap() {
         return map;
     }

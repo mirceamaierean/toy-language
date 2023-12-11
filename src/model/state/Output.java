@@ -22,6 +22,7 @@ public class Output implements IOutput {
         StringBuilder answer = new StringBuilder();
         for (String elem : this.data.getAll()) {
             answer.append(elem);
+            answer.append("\n");
         }
         return answer.toString();
     }

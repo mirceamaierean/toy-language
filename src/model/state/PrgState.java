@@ -7,14 +7,16 @@ public class PrgState {
     ISymTable symTable;
     IOutput output;
     IFileTable fileTable;
+    IHeap heap;
 
 
-    public PrgState(IExecutionStack executionStack, ISymTable symTable, IOutput output, IStatement statement, IFileTable fileTable) {
+    public PrgState(IExecutionStack executionStack, ISymTable symTable, IOutput output, IStatement statement, IFileTable fileTable, IHeap heap) {
         this.executionStack = executionStack;
         this.symTable = symTable;
         this.output = output;
         this.executionStack.push(statement);
         this.fileTable = fileTable;
+        this.heap = heap;
     }
 
     public IExecutionStack getExeStack() {
@@ -33,9 +35,12 @@ public class PrgState {
         return fileTable;
     }
 
+    public IHeap getHeap() {
+        return heap;
+    }
 
     @Override
     public String toString() {
-        return this.executionStack.toString().strip() + "\n" + this.symTable.toString().strip() + "\n" + this.output.toString().strip() + "\n" + this.fileTable.toString().strip() + "\n";
+        return this.executionStack.toString().strip() + "\n" + this.symTable.toString().strip() + "\n" + this.output.toString().strip() + "\n" + this.fileTable.toString().strip() + "\n" + this.heap.toString().strip() + "\n";
     }
 };

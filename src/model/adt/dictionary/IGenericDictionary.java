@@ -1,6 +1,7 @@
 package model.adt.dictionary;
 
 import java.util.List;
+import java.util.Map;
 
 public interface IGenericDictionary<K, V> {
 
@@ -11,6 +12,8 @@ public interface IGenericDictionary<K, V> {
     V lookup(K key) throws KeyNotFoundAppException;
 
     void delete(K key) throws KeyNotFoundAppException;
+
+    Map<K, V> getMap();
 
     List<K> getKeys();
 

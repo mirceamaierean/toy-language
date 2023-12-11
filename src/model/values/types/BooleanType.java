@@ -13,4 +13,9 @@ public class BooleanType implements IType {
     public String toString() {
         return "BooleanType";
     }
+
+    @Override
+    public boolean equals(IType other) {
+        return (other instanceof BooleanType);
+    }
 }

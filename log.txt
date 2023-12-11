@@ -1,303 +1,146 @@
 Execution stack:
-StringType varf; varf = "test.txt"; openRFile(varf); IntegerType varc; readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeRFile(varf)
+RefType IntegerType v; new(v, 20); new(v, 30); new(v, 40)
 SymTable:
 Output:
 Filetable:
+Heap:
 
 Execution stack:
-StringType varf
-varf = "test.txt"; openRFile(varf); IntegerType varc; readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeRFile(varf)
+RefType IntegerType v
+new(v, 20); new(v, 30); new(v, 40)
 SymTable:
 Output:
 Filetable:
+Heap:
 
 Execution stack:
-varf = "test.txt"; openRFile(varf); IntegerType varc; readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeRFile(varf)
+new(v, 20); new(v, 30); new(v, 40)
 SymTable:
-varf(StringType):-> ""
+v(RefType IntegerType):-> Ref(0,IntegerType)
 Output:
 Filetable:
+Heap:
 
 Execution stack:
-varf = "test.txt"
-openRFile(varf); IntegerType varc; readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeRFile(varf)
+new(v, 20)
+new(v, 30); new(v, 40)
 SymTable:
-varf(StringType):-> ""
+v(RefType IntegerType):-> Ref(0,IntegerType)
 Output:
 Filetable:
+Heap:
 
 Execution stack:
-openRFile(varf); IntegerType varc; readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeRFile(varf)
+new(v, 30); new(v, 40)
 SymTable:
-varf(StringType):-> "test.txt"
+v(RefType IntegerType):-> Ref(1,IntegerType)
 Output:
 Filetable:
+Heap:
+1(IntegerType):-> 20
 
 Execution stack:
-openRFile(varf)
-IntegerType varc; readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeRFile(varf)
+new(v, 30)
+new(v, 40)
 SymTable:
-varf(StringType):-> "test.txt"
+v(RefType IntegerType):-> Ref(1,IntegerType)
 Output:
 Filetable:
+Heap:
+1(IntegerType):-> 20
 
 Execution stack:
-IntegerType varc; readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeRFile(varf)
+new(v, 40)
 SymTable:
-varf(StringType):-> "test.txt"
+v(RefType IntegerType):-> Ref(2,IntegerType)
 Output:
 Filetable:
-test.txt
+Heap:
+2(IntegerType):-> 30
 
 Execution stack:
-IntegerType varc
-readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeRFile(varf)
 SymTable:
-varf(StringType):-> "test.txt"
+v(RefType IntegerType):-> Ref(3,IntegerType)
 Output:
 Filetable:
-test.txt
+Heap:
+3(IntegerType):-> 40
 
 Execution stack:
-readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeRFile(varf)
-SymTable:
-varf(StringType):-> "test.txt"
-varc(IntegerType):-> 0
-Output:
-Filetable:
-test.txt
-
-Execution stack:
-readFile(varf, varc)
-print(varc); readFile(varf, varc); print(varc); closeRFile(varf)
-SymTable:
-varf(StringType):-> "test.txt"
-varc(IntegerType):-> 0
-Output:
-Filetable:
-test.txt
-
-Execution stack:
-print(varc); readFile(varf, varc); print(varc); closeRFile(varf)
-SymTable:
-varf(StringType):-> "test.txt"
-varc(IntegerType):-> 15
-Output:
-Filetable:
-test.txt
-
-Execution stack:
-print(varc)
-readFile(varf, varc); print(varc); closeRFile(varf)
-SymTable:
-varf(StringType):-> "test.txt"
-varc(IntegerType):-> 15
-Output:
-Filetable:
-test.txt
-
-Execution stack:
-readFile(varf, varc); print(varc); closeRFile(varf)
-SymTable:
-varf(StringType):-> "test.txt"
-varc(IntegerType):-> 15
-Output: 15
-Filetable:
-test.txt
-
-Execution stack:
-readFile(varf, varc)
-print(varc); closeRFile(varf)
-SymTable:
-varf(StringType):-> "test.txt"
-varc(IntegerType):-> 15
-Output: 15
-Filetable:
-test.txt
-
-Execution stack:
-print(varc); closeRFile(varf)
-SymTable:
-varf(StringType):-> "test.txt"
-varc(IntegerType):-> 50
-Output: 15
-Filetable:
-test.txt
-
-Execution stack:
-print(varc)
-closeRFile(varf)
-SymTable:
-varf(StringType):-> "test.txt"
-varc(IntegerType):-> 50
-Output: 15
-Filetable:
-test.txt
-
-Execution stack:
-closeRFile(varf)
-SymTable:
-varf(StringType):-> "test.txt"
-varc(IntegerType):-> 50
-Output: 1550
-Filetable:
-test.txt
-
-Execution stack:
-SymTable:
-varf(StringType):-> "test.txt"
-varc(IntegerType):-> 50
-Output: 1550
-Filetable:
-
-Execution stack:
-StringType varf; varf = "test.txt"; openRFile(varf); openRFile(varf); IntegerType varc; readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeRFile(varf)
+RefType IntegerType v; new(v, "a"); RefType RefType IntegerType a; new(a, v); print(v); print(a)
 SymTable:
 Output:
 Filetable:
+Heap:
 
 Execution stack:
-StringType varf
-varf = "test.txt"; openRFile(varf); openRFile(varf); IntegerType varc; readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeRFile(varf)
+RefType IntegerType v
+new(v, "a"); RefType RefType IntegerType a; new(a, v); print(v); print(a)
 SymTable:
 Output:
 Filetable:
+Heap:
 
 Execution stack:
-varf = "test.txt"; openRFile(varf); openRFile(varf); IntegerType varc; readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeRFile(varf)
+new(v, "a"); RefType RefType IntegerType a; new(a, v); print(v); print(a)
 SymTable:
-varf(StringType):-> ""
+v(RefType IntegerType):-> Ref(0,IntegerType)
 Output:
 Filetable:
+Heap:
 
 Execution stack:
-varf = "test.txt"
-openRFile(varf); openRFile(varf); IntegerType varc; readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeRFile(varf)
+new(v, "a")
+RefType RefType IntegerType a; new(a, v); print(v); print(a)
 SymTable:
-varf(StringType):-> ""
+v(RefType IntegerType):-> Ref(0,IntegerType)
 Output:
 Filetable:
-
-Execution stack:
-openRFile(varf); openRFile(varf); IntegerType varc; readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeRFile(varf)
-SymTable:
-varf(StringType):-> "test.txt"
-Output:
-Filetable:
-
-Execution stack:
-openRFile(varf)
-openRFile(varf); IntegerType varc; readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeRFile(varf)
-SymTable:
-varf(StringType):-> "test.txt"
-Output:
-Filetable:
-
-Execution stack:
-openRFile(varf); IntegerType varc; readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeRFile(varf)
-SymTable:
-varf(StringType):-> "test.txt"
-Output:
-Filetable:
-test.txt
-
-Execution stack:
-openRFile(varf)
-IntegerType varc; readFile(varf, varc); print(varc); readFile(varf, varc); print(varc); closeRFile(varf)
-SymTable:
-varf(StringType):-> "test.txt"
-Output:
-Filetable:
-test.txt
+Heap:
 
 Execution stack:
 NOP
 SymTable:
 Output:
 Filetable:
+Heap:
 
 Execution stack:
-StringType varf; varf = "test.txt"; openRFile(varf); IntegerType varc; readFile(varf, vara); print(varc); readFile(varf, varc); print(varc); closeRFile(varf)
+RefType IntegerType v; new(v, "20"); RefType RefType IntegerType a; new(a, v); print(v); print(a)
 SymTable:
 Output:
 Filetable:
+Heap:
 
 Execution stack:
-StringType varf
-varf = "test.txt"; openRFile(varf); IntegerType varc; readFile(varf, vara); print(varc); readFile(varf, varc); print(varc); closeRFile(varf)
+RefType IntegerType v
+new(v, "20"); RefType RefType IntegerType a; new(a, v); print(v); print(a)
 SymTable:
 Output:
 Filetable:
+Heap:
 
 Execution stack:
-varf = "test.txt"; openRFile(varf); IntegerType varc; readFile(varf, vara); print(varc); readFile(varf, varc); print(varc); closeRFile(varf)
+new(v, "20"); RefType RefType IntegerType a; new(a, v); print(v); print(a)
 SymTable:
-varf(StringType):-> ""
+v(RefType IntegerType):-> Ref(0,IntegerType)
 Output:
 Filetable:
+Heap:
 
 Execution stack:
-varf = "test.txt"
-openRFile(varf); IntegerType varc; readFile(varf, vara); print(varc); readFile(varf, varc); print(varc); closeRFile(varf)
+new(v, "20")
+RefType RefType IntegerType a; new(a, v); print(v); print(a)
 SymTable:
-varf(StringType):-> ""
+v(RefType IntegerType):-> Ref(0,IntegerType)
 Output:
 Filetable:
-
-Execution stack:
-openRFile(varf); IntegerType varc; readFile(varf, vara); print(varc); readFile(varf, varc); print(varc); closeRFile(varf)
-SymTable:
-varf(StringType):-> "test.txt"
-Output:
-Filetable:
-
-Execution stack:
-openRFile(varf)
-IntegerType varc; readFile(varf, vara); print(varc); readFile(varf, varc); print(varc); closeRFile(varf)
-SymTable:
-varf(StringType):-> "test.txt"
-Output:
-Filetable:
-
-Execution stack:
-IntegerType varc; readFile(varf, vara); print(varc); readFile(varf, varc); print(varc); closeRFile(varf)
-SymTable:
-varf(StringType):-> "test.txt"
-Output:
-Filetable:
-test.txt
-
-Execution stack:
-IntegerType varc
-readFile(varf, vara); print(varc); readFile(varf, varc); print(varc); closeRFile(varf)
-SymTable:
-varf(StringType):-> "test.txt"
-Output:
-Filetable:
-test.txt
-
-Execution stack:
-readFile(varf, vara); print(varc); readFile(varf, varc); print(varc); closeRFile(varf)
-SymTable:
-varf(StringType):-> "test.txt"
-varc(IntegerType):-> 0
-Output:
-Filetable:
-test.txt
-
-Execution stack:
-readFile(varf, vara)
-print(varc); readFile(varf, varc); print(varc); closeRFile(varf)
-SymTable:
-varf(StringType):-> "test.txt"
-varc(IntegerType):-> 0
-Output:
-Filetable:
-test.txt
+Heap:
 
 Execution stack:
 NOP
 SymTable:
 Output:
 Filetable:
+Heap:
 
