@@ -3,6 +3,7 @@ package controller;
 import model.adt.stack.StackEmptyAppException;
 import model.exceptions.AppException;
 import model.state.*;
+import model.state.exceptions.SymbolNotFoundAppException;
 import model.statements.IStatement;
 import model.statements.NoOperationStatement;
 import repository.IRepository;
@@ -30,6 +31,7 @@ public class Controller implements IController {
         PrgState state = repository.getCrtPrg();
         IStatement statement = state.getExeStack().pop();
         statement.execute(state);
+        GarbageCollector.runGarbageCollector(repository.getCrtPrg());
         if (this.displayFlag) {
             this.displayCurrentState();
         }
@@ -60,7 +62,7 @@ public class Controller implements IController {
     @Override
     public void setProgram(IStatement statement) throws AppException {
         this.repository.clear();
-        this.repository.add(new PrgState(new ExecutionStack(), new SymTable(), new Output(), statement, new FileTable()));
+        this.repository.add(new PrgState(new ExecutionStack(), new SymTable(), new Output(), statement, new FileTable(), new Heap()));
         this.repository.logProgramState();
         if (this.displayFlag) {
             this.displayCurrentState();

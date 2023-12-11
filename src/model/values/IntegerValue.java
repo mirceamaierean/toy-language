@@ -2,13 +2,17 @@ package model.values;
 
 import model.values.exceptions.DivisionOverflowAppException;
 import model.values.exceptions.InvalidOperationAppException;
+import model.values.types.BooleanType;
 import model.values.types.IType;
 import model.values.types.IntegerType;
 
-public class IntegerValue implements IValue {
+public class IntegerValue implements  IValue{
     int value;
+    public IntegerValue(){
+        this.value = 0;
+    }
 
-    public IntegerValue(int value) {
+    public IntegerValue(int value){
         this.value = value;
     }
 
@@ -25,9 +29,9 @@ public class IntegerValue implements IValue {
     }
 
     private IntegerValue divide(IntegerValue other) throws DivisionOverflowAppException {
-        if (other.value == 0)
+        if(other.value == 0){
             throw new DivisionOverflowAppException("DivisionOverflowAppException: Cannot divide by 0");
-
+        }
         return new IntegerValue(this.value / other.value);
     }
 
@@ -61,31 +65,21 @@ public class IntegerValue implements IValue {
     }
 
     @Override
-    public IValue compose(IValue other, String operation) throws InvalidOperationAppException, DivisionOverflowAppException {
-        if (!(other.getType() instanceof IntegerType)) {
+    public IValue compose(IValue other, String operation) throws InvalidOperationAppException, DivisionOverflowAppException{
+        if(!(other.getType().equals(this.getType()))) {
             throw new InvalidOperationAppException("InvalidOperationAppException: Cannot compose two different types using operator " + operation);
         }
-        switch (operation) {
-            case "+":
-                return this.add((IntegerValue) other);
-            case "-":
-                return this.subtract((IntegerValue) other);
-            case "*":
-                return this.multiply((IntegerValue) other);
-            case "/":
-                return this.divide((IntegerValue) other);
-            case "<":
-                return this.lessThan((IntegerValue) other);
-            case "<=":
-                return this.lessThanEqual((IntegerValue) other);
-            case "==":
-                return this.equal((IntegerValue) other);
-            case "!=":
-                return this.notEqual((IntegerValue) other);
-            case ">":
-                return this.greaterThan((IntegerValue) other);
-            case ">=":
-                return this.greaterThanEqual((IntegerValue) other);
+        switch(operation){
+            case "+": return this.add((IntegerValue)other);
+            case "-": return this.subtract((IntegerValue)other);
+            case "*": return this.multiply((IntegerValue)other);
+            case "/": return this.divide((IntegerValue)other);
+            case "<":   return this.lessThan((IntegerValue) other);
+            case "<=":  return this.lessThanEqual((IntegerValue) other);
+            case "==":  return this.equal((IntegerValue) other);
+            case "!=":  return this.notEqual((IntegerValue) other);
+            case ">":   return this.greaterThan((IntegerValue)other);
+            case ">=":  return this.greaterThanEqual((IntegerValue)other);
         }
         throw new InvalidOperationAppException("InvalidOperationAppException: Cannot compose two IntegerValue types using operator " + operation);
     }
@@ -96,13 +90,12 @@ public class IntegerValue implements IValue {
     }
 
     @Override
-    public boolean equals(IValue other) {
-        if (other.getType() instanceof IntegerType)
-            return this.getValue() == ((IntegerValue) other).getValue();
-
+    public boolean equals(IValue other){
+        if(other.getType() instanceof IntegerType){
+            return this.getValue() == ((IntegerValue)other).getValue();
+        }
         return false;
     }
-
     public int getValue() {
         return this.value;
     }
