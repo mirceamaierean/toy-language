@@ -1,8 +1,11 @@
 package model.state;
 
+import model.exceptions.AppException;
 import model.statements.IStatement;
 
 public class PrgState {
+    int id;
+    static int nextId = 0;
     IExecutionStack executionStack;
     ISymTable symTable;
     IOutput output;
@@ -11,6 +14,7 @@ public class PrgState {
 
 
     public PrgState(IExecutionStack executionStack, ISymTable symTable, IOutput output, IStatement statement, IFileTable fileTable, IHeap heap) {
+        this.id = nextId++;
         this.executionStack = executionStack;
         this.symTable = symTable;
         this.output = output;
@@ -39,8 +43,17 @@ public class PrgState {
         return heap;
     }
 
+    public boolean isNotCompleted() {
+        return this.executionStack.size() > 0;
+    }
+
     @Override
     public String toString() {
-        return this.executionStack.toString().strip() + "\n" + this.symTable.toString().strip() + "\n" + this.output.toString().strip() + "\n" + this.fileTable.toString().strip() + "\n" + this.heap.toString().strip() + "\n";
+        return "Id: " + this.id + "\n" + this.executionStack.toString().strip() + "\n" + this.symTable.toString().strip() + "\n" + this.output.toString().strip() + "\n" + this.fileTable.toString().strip() + "\n" + this.heap.toString() + "\n";
     }
-};
+
+    public PrgState executeOneStep() throws AppException {
+        IStatement statement = executionStack.pop();
+        return statement.execute(this);
+    }
+}

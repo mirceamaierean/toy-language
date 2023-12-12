@@ -17,14 +17,16 @@ public class WhileStatement implements IStatement {
     }
 
     @Override
-    public void execute(PrgState state) throws AppException {
+    public PrgState execute(PrgState state) throws AppException {
         IValue value = this.condition.evaluate(state);
-        if (!(value.getType() instanceof BooleanType))
+        if (!(value.getType() instanceof BooleanType)) {
             throw new AppException("While condition should evaluate to a BooleanType");
-
-        if (((BooleanValue) value).getValue()) state.getExeStack().push(this);
-
+        }
+        if (((BooleanValue) value).getValue()) {
+            state.getExeStack().push(this);
+        }
         state.getExeStack().push(statement);
+        return null;
     }
 
     @Override

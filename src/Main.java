@@ -8,6 +8,7 @@ import view.IMainView;
 import view.MainView;
 
 import java.io.IOException;
+import java.util.concurrent.Executors;
 
 public class Main {
     // /Users/mirceamaierean/IdeaProjects/toy-language-map/src/log.txt
@@ -24,7 +25,7 @@ public class Main {
         String line = "log.txt";
 
         IRepository repository = new Repository(line);
-        IController controller = new Controller(repository, true);
+        IController controller = new Controller(repository, Executors.newFixedThreadPool(2),true);
         IMainView view = new MainView(controller);
         view.run();
     }

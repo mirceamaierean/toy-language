@@ -91,4 +91,9 @@ public class StringValue implements IValue {
     public String getValue() {
         return this.value;
     }
+
+    @Override
+    public IValue clone() {
+        return new StringValue(this.value);
+    }
 }

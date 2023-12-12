@@ -16,9 +16,10 @@ public class NewStatement implements IStatement {
     }
 
     @Override
-    public void execute(PrgState state) throws AppException {
+    public PrgState execute(PrgState state) throws AppException {
         IValue value = expression.evaluate(state);
         state.getSymTable().setValue(name, new RefValue(state.getHeap().allocate(value), value.getType()));
+        return null;
     }
 
     @Override

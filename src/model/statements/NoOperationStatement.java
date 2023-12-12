@@ -4,8 +4,13 @@ import model.exceptions.AppException;
 import model.state.PrgState;
 
 public class NoOperationStatement implements IStatement {
+    public NoOperationStatement() {
+        ;
+    }
+
     @Override
-    public void execute(PrgState state) {
+    public PrgState execute(PrgState state) throws AppException {
+        return null;
     }
 
     @Override

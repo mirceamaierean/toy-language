@@ -4,11 +4,13 @@ import model.exceptions.AppException;
 import model.statements.IStatement;
 
 public interface IController {
-    void oneStep() throws AppException;
+    void executeOneStep() throws AppException;
 
     void executeAllSteps() throws AppException;
 
     void displayCurrentState() throws AppException;
+
+    void removeCompletedPrograms();
 
     void setDisplayFlag(boolean displayFlag);
 

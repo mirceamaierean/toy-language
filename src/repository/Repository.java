@@ -1,6 +1,5 @@
 package repository;
 
-import model.exceptions.AppException;
 import model.state.PrgState;
 
 import java.io.BufferedWriter;
@@ -20,12 +19,13 @@ public class Repository implements IRepository {
     }
 
     @Override
-    public PrgState getCrtPrg() throws AppException {
-        try {
-            return programs.get(0);
-        } catch (IndexOutOfBoundsException exception) {
-            throw new AppException("No program selected");
-        }
+    public List<PrgState> getProgramsList() {
+        return programs;
+    }
+
+    @Override
+    public void setProgramsList(List<PrgState> programs) {
+        this.programs = programs;
     }
 
     @Override
@@ -34,15 +34,15 @@ public class Repository implements IRepository {
     }
 
     @Override
-    public void logProgramState() {
+    public void logProgramState(PrgState program) {
         if (this.logFilePath != null) {
-            PrintWriter logFile = null;
+            PrintWriter logFile;
             try {
                 logFile = new PrintWriter(new BufferedWriter(new FileWriter(logFilePath, true)));
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-            logFile.println(this.programs.get(0).toString());
+            logFile.println(program.toString());
             logFile.close();
         }
     }

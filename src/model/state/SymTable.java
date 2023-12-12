@@ -20,9 +20,9 @@ public class SymTable implements ISymTable {
 
     @Override
     public void declValue(String name, IType type) throws SymbolAlreadyExistsAppException {
-        if (data.exists(name)) {
+        if (data.exists(name))
             throw new SymbolAlreadyExistsAppException("Symbol " + name + " already exists.");
-        }
+
         data.insert(name, type.getDefaultValue());
     }
 
@@ -57,6 +57,18 @@ public class SymTable implements ISymTable {
             throw new RuntimeException(exception.getMessage());
         }
         return answer.toString();
+    }
+
+    @Override
+    public ISymTable copy() throws AppException{
+        ISymTable newSymTable = new SymTable();
+
+        for(String key:data.getKeys()){
+            newSymTable.declValue(key, data.lookup(key).getType());
+            newSymTable.setValue(key, data.lookup(key).clone());
+        }
+
+        return newSymTable;
     }
 
     public Map<String, IValue> getMap() {

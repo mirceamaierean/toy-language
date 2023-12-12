@@ -11,8 +11,6 @@ import model.values.IntegerValue;
 import model.values.StringValue;
 import model.values.types.IntegerType;
 import model.values.types.RefType;
-import view.commands.IViewCommand;
-import view.commands.MenuViewCommandFactory;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -20,11 +18,8 @@ import java.io.InputStreamReader;
 
 public class MainView implements IMainView {
     IController controller;
-    IViewCommand commandMenu;
-
     public MainView(IController controller) throws AppException {
         this.controller = controller;
-        this.commandMenu = MenuViewCommandFactory.build(controller);
     }
 
     public void handleFirstProgram() throws AppException {
@@ -57,29 +52,17 @@ public class MainView implements IMainView {
 
     public void handleSixthProgram() throws AppException {
         IStatement statement;
-        statement = new CompositeStatement(
-                new VariableDeclarationStatement("v", new RefType(new IntegerType())),
-                new CompositeStatement(new NewStatement("v", new ConstantExpression(new IntegerValue(20))),
-                        new NewStatement("v",
-                                new ConstantExpression(new IntegerValue(30)))));
+        statement = new CompositeStatement(new VariableDeclarationStatement("v", new RefType(new IntegerType())), new CompositeStatement(new NewStatement("v", new ConstantExpression(new IntegerValue(20))), new NewStatement("v", new ConstantExpression(new IntegerValue(30)))));
 
         this.controller.setProgram(statement);
     }
+
     public void handleSeventhProgram() throws AppException {
+        // 7) int v;Ref int a;v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))
         IStatement statement;
-        statement = new CompositeStatement(
-                new VariableDeclarationStatement("v", new RefType(new IntegerType())),
-                new CompositeStatement(new NewStatement("v", new ConstantExpression(new IntegerValue(20))),
-                        new CompositeStatement(
-                        new NewStatement("v",
-                                new ConstantExpression(new IntegerValue(30))),
-                                new NewStatement("v",
-                                        new ConstantExpression(new IntegerValue(40))))));
-
+        statement = new CompositeStatement(new VariableDeclarationStatement("v", new IntegerType()), new CompositeStatement(new VariableDeclarationStatement("a", new RefType(new IntegerType())), new CompositeStatement(new AssignmentStatement("v", new ConstantExpression(new IntegerValue(10))), new CompositeStatement(new NewStatement("a", new ConstantExpression(new IntegerValue(22))), new CompositeStatement(new ForkStatement(new CompositeStatement(new WriteHeapStatement(new VariableExpression("a"), new ConstantExpression(new IntegerValue(30))), new CompositeStatement(new AssignmentStatement("v", new ConstantExpression(new IntegerValue(32))), new CompositeStatement(new PrintStatement(new VariableExpression("v")), new PrintStatement(new ReadHeapFunction(new VariableExpression("a"))))))), new CompositeStatement(new PrintStatement(new VariableExpression("v")), new PrintStatement(new ReadHeapFunction(new VariableExpression("a")))))))));
         this.controller.setProgram(statement);
     }
-
-
 
 
     public void displayMenu() {
@@ -89,6 +72,7 @@ public class MainView implements IMainView {
         System.out.println("4) Ref int v;new(v,20);Ref Ref int a; new(a,v);new(v,30);print(rH(rH(a)))");
         System.out.println("5) int v; v=4; (while (v>0) print(v);v=v-1);print(v)");
         System.out.println("6) Ref int v;new(v,20);new(v,30);");
+        System.out.println("7) int v;Ref int a;v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))");
     }
 
     @Override
@@ -148,7 +132,21 @@ public class MainView implements IMainView {
                             System.out.println(exception.getMessage());
                         }
                     }
-                    default -> this.commandMenu.execute(cmd);
+                    case "7" -> {
+                        this.handleSeventhProgram();
+                        try {
+                            this.controller.executeAllSteps();
+                        } catch (AppException exception) {
+                            System.out.println(exception.getMessage());
+                        }
+                    }
+                    case "exit" -> {
+                        System.out.println("Exiting...");
+                        return;
+                    }
+                    default -> {
+                        System.out.println("Invalid command!");
+                    }
                 }
             } catch (AppException exception) {
                 System.out.println(exception.getMessage());

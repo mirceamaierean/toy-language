@@ -2,7 +2,7 @@ package model.statements;
 
 import model.state.PrgState;
 
-public class CompositeStatement implements IStatement {
+public class CompositeStatement implements IStatement{
     IStatement firstStatement;
     IStatement secondStatement;
 
@@ -12,13 +12,14 @@ public class CompositeStatement implements IStatement {
     }
 
     @Override
-    public void execute(PrgState state) {
+    public PrgState execute(PrgState state) {
         state.getExeStack().push(secondStatement);
         state.getExeStack().push(firstStatement);
+        return null;
     }
 
     @Override
-    public String toString() {
+    public String toString(){
         return firstStatement + "; " + secondStatement;
     }
 }
