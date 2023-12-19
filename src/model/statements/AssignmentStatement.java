@@ -3,7 +3,6 @@ package model.statements;
 import model.exceptions.AppException;
 import model.expressions.IExpression;
 import model.state.PrgState;
-import model.statements.exceptions.InvalidTypeException;
 
 public class AssignmentStatement implements IStatement {
     String variableName;
@@ -15,18 +14,9 @@ public class AssignmentStatement implements IStatement {
     }
 
     @Override
-    public void execute(PrgState state) throws AppException {
-
-        String stateType = state.getSymTable().getValue(variableName).getType().toString();
-        String expressionValue = this.expression.toString();
-
-        if (stateType == "IntegerType")
-        {
-            if (expressionValue == "false" && expressionValue == "true")
-                throw new InvalidTypeException("Variable " + variableName + " is not of type bool");
-        }
-
+    public PrgState execute(PrgState state) throws AppException {
         state.getSymTable().setValue(variableName, expression.evaluate(state));
+        return null;
     }
 
     @Override

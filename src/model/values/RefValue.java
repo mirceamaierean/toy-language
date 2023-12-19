@@ -40,4 +40,9 @@ public class RefValue implements IValue {
     public int getAddress() {
         return address;
     }
+
+    @Override
+    public IValue clone() {
+        return new RefValue(this.address, this.innerType);
+    }
 }

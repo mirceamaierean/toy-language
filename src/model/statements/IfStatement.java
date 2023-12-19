@@ -19,15 +19,17 @@ public class IfStatement implements IStatement {
     }
 
     @Override
-    public void execute(PrgState state) throws AppException {
+    public PrgState execute(PrgState state) throws AppException {
         IValue value = expression.evaluate(state);
-        if (!(value.getType() instanceof BooleanType))
+        if (!(value.getType() instanceof BooleanType)) {
             throw new AppException("Invalid expression value for if statement");
-
-        if (((BooleanValue) value).getValue())
+        }
+        if (((BooleanValue) value).getValue()) {
             state.getExeStack().push(left);
-        else
+        } else {
             state.getExeStack().push(right);
+        }
+        return null;
     }
 
     @Override

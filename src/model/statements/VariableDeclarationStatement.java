@@ -4,7 +4,7 @@ import model.exceptions.AppException;
 import model.state.PrgState;
 import model.values.types.IType;
 
-public class VariableDeclarationStatement implements IStatement {
+public class VariableDeclarationStatement implements IStatement{
     String name;
     IType type;
 
@@ -12,14 +12,14 @@ public class VariableDeclarationStatement implements IStatement {
         this.name = name;
         this.type = type;
     }
-
     @Override
-    public void execute(PrgState state) throws AppException {
+    public PrgState execute(PrgState state) throws AppException {
         state.getSymTable().declValue(name, type);
+        return null;
     }
 
     @Override
-    public String toString() {
+    public String toString(){
         return type.toString() + " " + name;
     }
 }

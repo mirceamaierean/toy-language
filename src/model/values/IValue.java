@@ -11,4 +11,5 @@ public interface IValue {
     IType getType();
 
     boolean equals(IValue other);
+    IValue clone();
 }
