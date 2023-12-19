@@ -18,7 +18,8 @@ import java.io.InputStreamReader;
 
 public class MainView implements IMainView {
     IController controller;
-    public MainView(IController controller) throws AppException {
+
+    public MainView(IController controller) {
         this.controller = controller;
     }
 
@@ -64,6 +65,12 @@ public class MainView implements IMainView {
         this.controller.setProgram(statement);
     }
 
+    public void handleEightProgram() throws AppException {
+        // 8) Ref int a; int count; while(count<10) {fork(fork(new (a,count)));count=count+1};
+        IStatement statement;
+        statement = new CompositeStatement(new VariableDeclarationStatement("a", new RefType(new IntegerType())), new CompositeStatement(new VariableDeclarationStatement("count", new IntegerType()), new WhileStatement(new BinaryExpression(new VariableExpression("count"), new ConstantExpression(new IntegerValue(10)), "<"), new CompositeStatement(new ForkStatement(new ForkStatement(new NewStatement("a", new VariableExpression("count")))), new AssignmentStatement("count", new BinaryExpression(new VariableExpression("count"), new ConstantExpression(new IntegerValue(1)), "+"))))));
+        this.controller.setProgram(statement);
+    }
 
     public void displayMenu() {
         System.out.println("1) Ref int v;new(v,20);Ref Ref int a; new(a,v);print(v);print(a)");
@@ -73,6 +80,7 @@ public class MainView implements IMainView {
         System.out.println("5) int v; v=4; (while (v>0) print(v);v=v-1);print(v)");
         System.out.println("6) Ref int v;new(v,20);new(v,30);");
         System.out.println("7) int v;Ref int a;v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))");
+        System.out.println("8) Ref int a; int count; while(count<10) {fork(fork(new (a,count)));count=count+1};");
     }
 
     @Override
@@ -140,13 +148,19 @@ public class MainView implements IMainView {
                             System.out.println(exception.getMessage());
                         }
                     }
+                    case "8" -> {
+                        this.handleEightProgram();
+                        try {
+                            this.controller.executeAllSteps();
+                        } catch (AppException exception) {
+                            System.out.println(exception.getMessage());
+                        }
+                    }
                     case "exit" -> {
                         System.out.println("Exiting...");
                         return;
                     }
-                    default -> {
-                        System.out.println("Invalid command!");
-                    }
+                    default -> System.out.println("Invalid command!");
                 }
             } catch (AppException exception) {
                 System.out.println(exception.getMessage());

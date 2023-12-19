@@ -6,8 +6,8 @@ import model.statements.IStatement;
 import model.statements.NoOperationStatement;
 import repository.IRepository;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
@@ -42,7 +42,7 @@ public class Controller implements IController {
     public void executeOneStep() throws AppException {
         this.removeCompletedPrograms();
 
-        List<Callable<PrgState>> stepList = repository.getProgramsList().stream().map(program -> (Callable<PrgState>) (() -> program.executeOneStep())).toList();
+        List<Callable<PrgState>> stepList = repository.getProgramsList().stream().map(program -> (Callable<PrgState>) (program::executeOneStep)).toList();
         List<PrgState> newPrograms;
 
         try {
@@ -52,7 +52,7 @@ public class Controller implements IController {
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 } catch (ExecutionException e) {
-                    System.out.println(e);
+                    System.out.println(e.getMessage());
                     try {
                         this.setProgram(new NoOperationStatement());
                     } catch (AppException ex) {
@@ -60,7 +60,7 @@ public class Controller implements IController {
                     }
                 }
                 return null;
-            }).filter(p -> p != null).toList();
+            }).filter(Objects::nonNull).toList();
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -76,7 +76,7 @@ public class Controller implements IController {
     public void executeAllSteps() throws AppException {
         while (true) {
             this.removeCompletedPrograms();
-            if (this.repository.getProgramsList().size() == 0) {
+            if (this.repository.getProgramsList().isEmpty()) {
                 break;
             }
             this.executeOneStep();
