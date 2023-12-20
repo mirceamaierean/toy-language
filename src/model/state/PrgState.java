@@ -14,13 +14,18 @@ public class PrgState {
 
 
     public PrgState(IExecutionStack executionStack, ISymTable symTable, IOutput output, IStatement statement, IFileTable fileTable, IHeap heap) {
-        this.id = nextId++;
+        this.id = getId();
         this.executionStack = executionStack;
         this.symTable = symTable;
         this.output = output;
         this.executionStack.push(statement);
         this.fileTable = fileTable;
         this.heap = heap;
+    }
+
+    public synchronized int getId() {
+        nextId++;
+        return nextId;
     }
 
     public IExecutionStack getExeStack() {

@@ -40,6 +40,6 @@ public class Output implements IOutput {
 
     @Override
     public String toString() {
-        return "Output: " + this.getOutput();
+        return "Output:\n" + this.getOutput();
     }
 }

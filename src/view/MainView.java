@@ -66,9 +66,9 @@ public class MainView implements IMainView {
     }
 
     public void handleEightProgram() throws AppException {
-        // 8) Ref int a; int count; while(count<10) {fork(fork(new (a,count)));count=count+1};
+        // 8) Ref int a; int count; while(count<10) {fork(fork(new (a,count)); print(rH(a))));count=count+1};
         IStatement statement;
-        statement = new CompositeStatement(new VariableDeclarationStatement("a", new RefType(new IntegerType())), new CompositeStatement(new VariableDeclarationStatement("count", new IntegerType()), new WhileStatement(new BinaryExpression(new VariableExpression("count"), new ConstantExpression(new IntegerValue(10)), "<"), new CompositeStatement(new ForkStatement(new ForkStatement(new NewStatement("a", new VariableExpression("count")))), new AssignmentStatement("count", new BinaryExpression(new VariableExpression("count"), new ConstantExpression(new IntegerValue(1)), "+"))))));
+        statement = new CompositeStatement(new VariableDeclarationStatement("a", new RefType(new IntegerType())), new CompositeStatement(new VariableDeclarationStatement("count", new IntegerType()), new WhileStatement(new BinaryExpression(new VariableExpression("count"), new ConstantExpression(new IntegerValue(10)), "<"), new CompositeStatement(new ForkStatement(new ForkStatement(new CompositeStatement(new NewStatement("a", new VariableExpression("count")), new PrintStatement(new ReadHeapFunction(new VariableExpression("a")))))), new AssignmentStatement("count", new BinaryExpression(new VariableExpression("count"), new ConstantExpression(new IntegerValue(1)), "+"))))));
         this.controller.setProgram(statement);
     }
 
