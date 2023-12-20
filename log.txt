@@ -1,0 +1,981 @@
+Id: 0
+Execution stack:
+RefType IntegerType a; IntegerType count; While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+RefType IntegerType a
+IntegerType count; While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+IntegerType count; While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+IntegerType count
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+fork(fork(new(a, count))); count = (count + 1)
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+fork(fork(new(a, count)))
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+Id: 1
+Execution stack:
+fork(new(a, count))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 1
+Output:
+Filetable:
+Heap:
+
+
+Id: 1
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+Id: 2
+Execution stack:
+new(a, count)
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+fork(fork(new(a, count))); count = (count + 1)
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 1
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 0
+
+
+Id: 2
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(1,IntegerType)
+count(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 0
+
+
+Id: 0
+Execution stack:
+fork(fork(new(a, count)))
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 1
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 1
+Output:
+Filetable:
+Heap:
+
+
+Id: 3
+Execution stack:
+fork(new(a, count))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 1
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 2
+Output:
+Filetable:
+Heap:
+
+
+Id: 3
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 1
+Output:
+Filetable:
+Heap:
+
+
+Id: 4
+Execution stack:
+new(a, count)
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 1
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+fork(fork(new(a, count))); count = (count + 1)
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 2
+Output:
+Filetable:
+Heap:
+2(IntegerType):-> 1
+
+
+Id: 4
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(2,IntegerType)
+count(IntegerType):-> 1
+Output:
+Filetable:
+Heap:
+2(IntegerType):-> 1
+
+
+Id: 0
+Execution stack:
+fork(fork(new(a, count)))
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 2
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 2
+Output:
+Filetable:
+Heap:
+
+
+Id: 5
+Execution stack:
+fork(new(a, count))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 2
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 3
+Output:
+Filetable:
+Heap:
+
+
+Id: 5
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 2
+Output:
+Filetable:
+Heap:
+
+
+Id: 6
+Execution stack:
+new(a, count)
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 2
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+fork(fork(new(a, count))); count = (count + 1)
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 3
+Output:
+Filetable:
+Heap:
+3(IntegerType):-> 2
+
+
+Id: 6
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(3,IntegerType)
+count(IntegerType):-> 2
+Output:
+Filetable:
+Heap:
+3(IntegerType):-> 2
+
+
+Id: 0
+Execution stack:
+fork(fork(new(a, count)))
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 3
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 3
+Output:
+Filetable:
+Heap:
+
+
+Id: 7
+Execution stack:
+fork(new(a, count))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 3
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 4
+Output:
+Filetable:
+Heap:
+
+
+Id: 7
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 3
+Output:
+Filetable:
+Heap:
+
+
+Id: 8
+Execution stack:
+new(a, count)
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 3
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+fork(fork(new(a, count))); count = (count + 1)
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 4
+Output:
+Filetable:
+Heap:
+4(IntegerType):-> 3
+
+
+Id: 8
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(4,IntegerType)
+count(IntegerType):-> 3
+Output:
+Filetable:
+Heap:
+4(IntegerType):-> 3
+
+
+Id: 0
+Execution stack:
+fork(fork(new(a, count)))
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 4
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 4
+Output:
+Filetable:
+Heap:
+
+
+Id: 9
+Execution stack:
+fork(new(a, count))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 4
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 5
+Output:
+Filetable:
+Heap:
+
+
+Id: 9
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 4
+Output:
+Filetable:
+Heap:
+
+
+Id: 10
+Execution stack:
+new(a, count)
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 4
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+fork(fork(new(a, count))); count = (count + 1)
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 5
+Output:
+Filetable:
+Heap:
+5(IntegerType):-> 4
+
+
+Id: 10
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(5,IntegerType)
+count(IntegerType):-> 4
+Output:
+Filetable:
+Heap:
+5(IntegerType):-> 4
+
+
+Id: 0
+Execution stack:
+fork(fork(new(a, count)))
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 5
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 5
+Output:
+Filetable:
+Heap:
+
+
+Id: 11
+Execution stack:
+fork(new(a, count))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 5
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 6
+Output:
+Filetable:
+Heap:
+
+
+Id: 11
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 5
+Output:
+Filetable:
+Heap:
+
+
+Id: 12
+Execution stack:
+new(a, count)
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 5
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+fork(fork(new(a, count))); count = (count + 1)
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 6
+Output:
+Filetable:
+Heap:
+6(IntegerType):-> 5
+
+
+Id: 12
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(6,IntegerType)
+count(IntegerType):-> 5
+Output:
+Filetable:
+Heap:
+6(IntegerType):-> 5
+
+
+Id: 0
+Execution stack:
+fork(fork(new(a, count)))
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 6
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 6
+Output:
+Filetable:
+Heap:
+
+
+Id: 13
+Execution stack:
+fork(new(a, count))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 6
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 7
+Output:
+Filetable:
+Heap:
+
+
+Id: 13
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 6
+Output:
+Filetable:
+Heap:
+
+
+Id: 14
+Execution stack:
+new(a, count)
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 6
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+fork(fork(new(a, count))); count = (count + 1)
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 7
+Output:
+Filetable:
+Heap:
+7(IntegerType):-> 6
+
+
+Id: 14
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(7,IntegerType)
+count(IntegerType):-> 6
+Output:
+Filetable:
+Heap:
+7(IntegerType):-> 6
+
+
+Id: 0
+Execution stack:
+fork(fork(new(a, count)))
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 7
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 7
+Output:
+Filetable:
+Heap:
+
+
+Id: 15
+Execution stack:
+fork(new(a, count))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 7
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 8
+Output:
+Filetable:
+Heap:
+
+
+Id: 15
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 7
+Output:
+Filetable:
+Heap:
+
+
+Id: 16
+Execution stack:
+new(a, count)
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 7
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+fork(fork(new(a, count))); count = (count + 1)
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 8
+Output:
+Filetable:
+Heap:
+8(IntegerType):-> 7
+
+
+Id: 16
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(8,IntegerType)
+count(IntegerType):-> 7
+Output:
+Filetable:
+Heap:
+8(IntegerType):-> 7
+
+
+Id: 0
+Execution stack:
+fork(fork(new(a, count)))
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 8
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 8
+Output:
+Filetable:
+Heap:
+
+
+Id: 17
+Execution stack:
+fork(new(a, count))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 8
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 9
+Output:
+Filetable:
+Heap:
+
+
+Id: 17
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 8
+Output:
+Filetable:
+Heap:
+
+
+Id: 18
+Execution stack:
+new(a, count)
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 8
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+fork(fork(new(a, count))); count = (count + 1)
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 9
+Output:
+Filetable:
+Heap:
+9(IntegerType):-> 8
+
+
+Id: 18
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(9,IntegerType)
+count(IntegerType):-> 8
+Output:
+Filetable:
+Heap:
+9(IntegerType):-> 8
+
+
+Id: 0
+Execution stack:
+fork(fork(new(a, count)))
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 9
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 9
+Output:
+Filetable:
+Heap:
+
+
+Id: 19
+Execution stack:
+fork(new(a, count))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 9
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+While((count < 10)){fork(fork(new(a, count))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 10
+Output:
+Filetable:
+Heap:
+
+
+Id: 19
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 9
+Output:
+Filetable:
+Heap:
+
+
+Id: 20
+Execution stack:
+new(a, count)
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 9
+Output:
+Filetable:
+Heap:
+
+
+Id: 0
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 10
+Output:
+Filetable:
+Heap:
+10(IntegerType):-> 9
+
+
+Id: 20
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(10,IntegerType)
+count(IntegerType):-> 9
+Output:
+Filetable:
+Heap:
+10(IntegerType):-> 9
+
+
