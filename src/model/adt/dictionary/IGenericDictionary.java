@@ -18,4 +18,6 @@ public interface IGenericDictionary<K, V> {
     List<K> getKeys();
 
     boolean exists(K key);
+
+    IGenericDictionary<K, V> copy();
 }

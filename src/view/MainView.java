@@ -24,7 +24,7 @@ public class MainView implements IMainView {
     }
 
     public void handleFirstProgram() throws AppException {
-        IStatement statement = new CompositeStatement(new VariableDeclarationStatement("v", new RefType(new IntegerType())), new CompositeStatement(new NewStatement("v", new ConstantExpression(new StringValue("20"))), new CompositeStatement(new VariableDeclarationStatement("a", new RefType(new RefType(new IntegerType()))), new CompositeStatement(new NewStatement("a", new VariableExpression("v")), new CompositeStatement(new PrintStatement(new VariableExpression("v")), new PrintStatement(new VariableExpression("a")))))));
+        IStatement statement = new CompositeStatement(new VariableDeclarationStatement("v", new RefType(new IntegerType())), new CompositeStatement(new NewStatement("v", new ConstantExpression(new IntegerValue(20))), new CompositeStatement(new VariableDeclarationStatement("a", new RefType(new RefType(new IntegerType()))), new CompositeStatement(new NewStatement("a", new VariableExpression("v")), new CompositeStatement(new PrintStatement(new VariableExpression("v")), new PrintStatement(new VariableExpression("a")))))));
         this.controller.setProgram(statement);
     }
 
@@ -35,8 +35,6 @@ public class MainView implements IMainView {
 
     public void handleThirdProgram() throws AppException {
         IStatement statement = new CompositeStatement(new VariableDeclarationStatement("v", new RefType(new IntegerType())), new CompositeStatement(new NewStatement("v", new ConstantExpression(new IntegerValue(20))), new CompositeStatement(new PrintStatement(new ReadHeapFunction(new VariableExpression("v"))), new CompositeStatement(new WriteHeapStatement(new VariableExpression("v"), new ConstantExpression(new StringValue("a"))), new PrintStatement(new BinaryExpression(new ReadHeapFunction(new VariableExpression("v")), new ConstantExpression(new IntegerValue(5)), "+"))))));
-        controller.setProgram(statement);
-        controller.executeAllSteps();
         this.controller.setProgram(statement);
     }
 

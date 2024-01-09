@@ -49,10 +49,9 @@ public class GenericDictionary<K, V> implements IGenericDictionary<K, V> {
         for (K key : map.keySet()) {
             result.append(key.toString()).append(" -> ").append(map.get(key).toString()).append("\n");
         }
-        return "GenericDictionary{" +
-                "map=" + result +
-                '}';
+        return "GenericDictionary{" + "map=" + result + '}';
     }
+
     @Override
     public Map<K, V> getMap() {
         return map;
@@ -65,5 +64,14 @@ public class GenericDictionary<K, V> implements IGenericDictionary<K, V> {
     @Override
     public List<K> getKeys() {
         return new ArrayList<>(this.map.keySet());
+    }
+
+    @Override
+    public IGenericDictionary<K, V> copy() {
+        GenericDictionary<K, V> answer = new GenericDictionary<>();
+        for (K key : this.map.keySet())
+            answer.map.put(key, this.map.get(key));
+        return answer;
+
     }
 }

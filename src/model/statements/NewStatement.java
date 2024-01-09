@@ -1,10 +1,13 @@
 package model.statements;
 
+import model.adt.dictionary.IGenericDictionary;
 import model.exceptions.AppException;
 import model.expressions.IExpression;
 import model.state.PrgState;
 import model.values.IValue;
 import model.values.RefValue;
+import model.values.types.IType;
+import model.values.types.RefType;
 
 public class NewStatement implements IStatement {
     String name;
@@ -24,6 +27,17 @@ public class NewStatement implements IStatement {
 
     @Override
     public String toString() {
-        return "new(" + this.name.toString() + ", " + this.expression.toString() + ")";
+        return "new(" + this.name + ", " + this.expression.toString() + ")";
+    }
+
+    @Override
+    public IGenericDictionary<String, IType> typecheck(IGenericDictionary<String, IType> typeDictionary) throws AppException {
+        IType variableType = typeDictionary.lookup(name);
+        IType expressionType = expression.typecheck(typeDictionary);
+
+        if (variableType != null && variableType.equals(new RefType(expressionType)))
+            return typeDictionary;
+
+        throw new AppException("Mismatched types for new statement");
     }
 }

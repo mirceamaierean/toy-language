@@ -1,8 +1,11 @@
 package model.statements;
 
+import model.adt.dictionary.IGenericDictionary;
+import model.exceptions.AppException;
 import model.state.PrgState;
+import model.values.types.IType;
 
-public class CompositeStatement implements IStatement{
+public class CompositeStatement implements IStatement {
     IStatement firstStatement;
     IStatement secondStatement;
 
@@ -19,7 +22,12 @@ public class CompositeStatement implements IStatement{
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return firstStatement + "; " + secondStatement;
+    }
+
+    @Override
+    public IGenericDictionary<String, IType> typecheck(IGenericDictionary<String, IType> typeDictionary) throws AppException {
+        return secondStatement.typecheck(firstStatement.typecheck(typeDictionary));
     }
 }

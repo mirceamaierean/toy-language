@@ -1,5 +1,6 @@
 package controller;
 
+import model.adt.dictionary.GenericDictionary;
 import model.exceptions.AppException;
 import model.state.*;
 import model.statements.IStatement;
@@ -18,6 +19,12 @@ public class Controller implements IController {
     boolean displayFlag;
     ExecutorService executor;
 
+    public Controller(IRepository repository, ExecutorService executor, boolean displayFlag) {
+        this.repository = repository;
+        this.executor = executor;
+        this.displayFlag = displayFlag;
+    }
+
     public boolean getDisplayFlag() {
         return displayFlag;
     }
@@ -27,40 +34,41 @@ public class Controller implements IController {
         this.displayFlag = displayFlag;
     }
 
-    public Controller(IRepository repository, ExecutorService executor, boolean displayFlag) {
-        this.repository = repository;
-        this.executor = executor;
-        this.displayFlag = displayFlag;
-    }
-
     @Override
     public void removeCompletedPrograms() {
-        this.repository.setProgramsList(this.repository.getProgramsList().stream().filter(PrgState::isNotCompleted).collect(Collectors.toList()));
+        this.repository.setProgramsList(
+                this.repository.getProgramsList().stream()
+                        .filter(PrgState::isNotCompleted)
+                        .collect(Collectors.toList()));
     }
 
     @Override
     public void executeOneStep() throws AppException {
         this.removeCompletedPrograms();
+        List<Callable<PrgState>> stepList = repository.getProgramsList().stream()
+                .map(program -> (Callable<PrgState>) (program::executeOneStep))
+                .toList();
 
-        List<Callable<PrgState>> stepList = repository.getProgramsList().stream().map(program -> (Callable<PrgState>) (program::executeOneStep)).toList();
-        List<PrgState> newPrograms;
-
+        List<PrgState> newPrograms = null;
         try {
-            newPrograms = executor.invokeAll(stepList).stream().map(future -> {
-                try {
-                    return future.get();
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                } catch (ExecutionException e) {
-                    System.out.println(e.getMessage());
-                    try {
-                        this.setProgram(new NoOperationStatement());
-                    } catch (AppException ex) {
-                        throw new RuntimeException(ex);
-                    }
-                }
-                return null;
-            }).filter(Objects::nonNull).toList();
+            newPrograms = executor.invokeAll(stepList).stream()
+                    .map(future -> {
+                        try {
+                            return future.get();
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        } catch (ExecutionException e) {
+                            System.out.println(e);
+                            try {
+                                this.setProgram(new NoOperationStatement());
+                            } catch (AppException ex) {
+                                throw new RuntimeException(ex);
+                            }
+                        }
+                        return null;
+                    })
+                    .filter(Objects::nonNull)
+                    .toList();
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -76,9 +84,9 @@ public class Controller implements IController {
     public void executeAllSteps() throws AppException {
         while (true) {
             this.removeCompletedPrograms();
-            if (this.repository.getProgramsList().isEmpty()) {
+            if (this.repository.getProgramsList().isEmpty())
                 break;
-            }
+
             this.executeOneStep();
         }
     }
@@ -90,11 +98,11 @@ public class Controller implements IController {
 
     @Override
     public void setProgram(IStatement statement) throws AppException {
+        statement.typecheck(new GenericDictionary<>());
         this.repository.clear();
         this.repository.add(new PrgState(new ExecutionStack(), new SymTable(), new Output(), statement, new FileTable(), new Heap()));
         this.repository.logProgramState(this.repository.getProgramsList().get(0));
-        if (this.displayFlag) {
+        if (this.displayFlag)
             this.displayCurrentState();
-        }
     }
 }

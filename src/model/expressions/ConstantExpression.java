@@ -1,7 +1,9 @@
 package model.expressions;
 
+import model.adt.dictionary.IGenericDictionary;
 import model.state.PrgState;
 import model.values.IValue;
+import model.values.types.IType;
 
 public class ConstantExpression implements IExpression {
     IValue value;
@@ -18,5 +20,10 @@ public class ConstantExpression implements IExpression {
     @Override
     public String toString() {
         return value.toString();
+    }
+
+    @Override
+    public IType typecheck(IGenericDictionary<String, IType> typeDictionary) {
+        return value.getType();
     }
 }

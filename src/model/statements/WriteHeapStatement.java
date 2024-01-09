@@ -1,10 +1,12 @@
 package model.statements;
 
+import model.adt.dictionary.IGenericDictionary;
 import model.exceptions.AppException;
 import model.expressions.IExpression;
 import model.state.PrgState;
 import model.values.IValue;
 import model.values.RefValue;
+import model.values.types.IType;
 import model.values.types.RefType;
 
 public class WriteHeapStatement implements IStatement {
@@ -30,5 +32,15 @@ public class WriteHeapStatement implements IStatement {
     @Override
     public String toString() {
         return "writeHeap(" + addressExpression.toString() + ", " + valueExpression.toString() + ")";
+    }
+
+    @Override
+    public IGenericDictionary<String, IType> typecheck(IGenericDictionary<String, IType> typeDictionary) throws AppException {
+        IType addressType = addressExpression.typecheck(typeDictionary);
+        valueExpression.typecheck(typeDictionary);
+        if (!(addressType instanceof RefType))
+            throw new AppException("Write heap expression does not evaluate to a RefType");
+        
+        return typeDictionary;
     }
 }

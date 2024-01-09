@@ -1,9 +1,11 @@
 package model.expressions;
 
+import model.adt.dictionary.IGenericDictionary;
 import model.exceptions.AppException;
 import model.state.PrgState;
 import model.values.IValue;
 import model.values.RefValue;
+import model.values.types.IType;
 import model.values.types.RefType;
 
 public class ReadHeapFunction implements IExpression {
@@ -25,5 +27,14 @@ public class ReadHeapFunction implements IExpression {
     @Override
     public String toString() {
         return "readHeap(" + expr.toString() + ")";
+    }
+
+    @Override
+    public IType typecheck(IGenericDictionary<String, IType> typeDictionary) throws AppException {
+        IType type = expr.typecheck(typeDictionary);
+        if (!(type instanceof RefType))
+            throw new AppException("Heap should only be accessed through references");
+
+        return ((RefType) type).getInner();
     }
 }

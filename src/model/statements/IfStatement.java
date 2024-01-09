@@ -1,11 +1,13 @@
 package model.statements;
 
+import model.adt.dictionary.IGenericDictionary;
 import model.exceptions.AppException;
 import model.expressions.IExpression;
 import model.state.PrgState;
 import model.values.BooleanValue;
 import model.values.IValue;
 import model.values.types.BooleanType;
+import model.values.types.IType;
 
 public class IfStatement implements IStatement {
     IExpression expression;
@@ -35,5 +37,15 @@ public class IfStatement implements IStatement {
     @Override
     public String toString() {
         return "if(" + this.expression.toString() + ")" + "then {" + this.left.toString() + "} else {" + this.right.toString() + "}";
+    }
+
+    @Override
+    public IGenericDictionary<String, IType> typecheck(IGenericDictionary<String, IType> typeDictionary) throws AppException {
+        if (!(new BooleanType()).equals(expression.typecheck(typeDictionary))) {
+            throw new AppException("If condition does not evaluate to a BooleanType");
+        }
+        left.typecheck(typeDictionary.copy());
+        right.typecheck(typeDictionary.copy());
+        return typeDictionary;
     }
 }

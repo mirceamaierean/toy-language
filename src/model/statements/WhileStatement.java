@@ -1,11 +1,13 @@
 package model.statements;
 
+import model.adt.dictionary.IGenericDictionary;
 import model.exceptions.AppException;
 import model.expressions.IExpression;
 import model.state.PrgState;
 import model.values.BooleanValue;
 import model.values.IValue;
 import model.values.types.BooleanType;
+import model.values.types.IType;
 
 public class WhileStatement implements IStatement {
     IExpression condition;
@@ -32,5 +34,14 @@ public class WhileStatement implements IStatement {
     @Override
     public String toString() {
         return "While(" + condition.toString() + "){" + statement.toString() + "};";
+    }
+
+    @Override
+    public IGenericDictionary<String, IType> typecheck(IGenericDictionary<String, IType> typeDictionary) throws AppException {
+
+        if ((new BooleanType()).equals(condition.typecheck(typeDictionary)))
+            return statement.typecheck(typeDictionary);
+
+        throw new AppException("While condition does not evaluate to a BooleanType");
     }
 }

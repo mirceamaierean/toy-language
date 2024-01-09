@@ -15,7 +15,8 @@ public class Main {
         String line = "log.txt";
 
         IRepository repository = new Repository(line);
-        IController controller = new Controller(repository, Executors.newFixedThreadPool(2),true);
+        IController controller = new Controller(repository, Executors.newFixedThreadPool(2), true);
+
         IMainView view = new MainView(controller);
         view.run();
     }

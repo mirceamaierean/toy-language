@@ -1,11 +1,14 @@
 package model.statements;
 
+import model.adt.dictionary.IGenericDictionary;
 import model.exceptions.AppException;
 import model.expressions.IExpression;
 import model.state.PrgState;
 import model.values.IValue;
 import model.values.IntegerValue;
 import model.values.StringValue;
+import model.values.types.IType;
+import model.values.types.IntegerType;
 import model.values.types.StringType;
 
 public class ReadFileStatement implements IStatement {
@@ -30,5 +33,16 @@ public class ReadFileStatement implements IStatement {
     @Override
     public String toString() {
         return "readFile(" + this.expression.toString() + ", " + this.name + ")";
+    }
+
+    @Override
+    public IGenericDictionary<String, IType> typecheck(IGenericDictionary<String, IType> typeDictionary) throws AppException {
+        if (!(new StringType()).equals(expression.typecheck(typeDictionary)))
+            throw new AppException("Read file expression does not evaluate to a string");
+
+        if (!typeDictionary.lookup(name).equals(new IntegerType()))
+            throw new AppException("Read file value is not of IntegerType type");
+
+        return typeDictionary;
     }
 }
