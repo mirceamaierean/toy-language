@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+
+<Pane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="view.GUI.setWindow.SetProgramController">
+    <VBox>
+        <HBox alignment="CENTER_LEFT" prefHeight="418.0" prefWidth="555.0">
+            <TabPane prefHeight="418.0" prefWidth="537.0" tabClosingPolicy="UNAVAILABLE">
+                <Tab fx:id="hardcodedTab" text="examples">
+                    <ListView fx:id="examplesListView" prefHeight="385.0" prefWidth="562.0"/>
+                </Tab>
+            </TabPane>
+            <Button fx:id="setButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="40.0" text="Set"/>
+        </HBox>
+        <HBox>
+            <TextArea fx:id="error" editable="false" prefHeight="26.0" prefWidth="581.0"/>
+        </HBox>
+    </VBox>
+</Pane>
