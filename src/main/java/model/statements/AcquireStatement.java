@@ -8,7 +8,7 @@ import model.values.IntegerValue;
 import model.values.types.IType;
 import model.values.types.IntegerType;
 
-public class AcquireStatement implements  IStatement {
+public class AcquireStatement implements IStatement {
     String name;
 
     public AcquireStatement(String name) {
