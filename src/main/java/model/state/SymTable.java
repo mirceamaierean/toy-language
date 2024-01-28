@@ -71,6 +71,11 @@ public class SymTable implements ISymTable {
         return newSymTable;
     }
 
+    @Override
+    public boolean containsKey(String key) {
+        return this.data.exists(key);
+    }
+
     public Map<String, IValue> getMap() {
         return this.data.getMap();
     }

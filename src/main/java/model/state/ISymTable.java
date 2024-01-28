@@ -14,7 +14,7 @@ public interface ISymTable {
     IValue getValue(String name) throws AppException;
     void setValue(String name, IValue value) throws AppException;
     String toString();
-
     ISymTable copy() throws AppException;
+    boolean containsKey(String key);
     Map<String, IValue> getMap();
 }
