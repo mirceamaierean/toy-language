@@ -32,6 +32,10 @@ public class PrgState {
         return executionStack;
     }
 
+    public void setExeStack(IExecutionStack executionStack) {
+        this.executionStack = executionStack;
+    }
+
     public ISymTable getSymTable() {
         return symTable;
     }
