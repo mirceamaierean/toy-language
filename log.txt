@@ -5492,3 +5492,357 @@ Heap:
 2(RefType IntegerType):-> Ref(1,IntegerType)
 
 
+Id: 1
+Execution stack:
+RefType IntegerType a; RefType IntegerType b; IntegerType v; new(a, 0); new(b, 0); writeHeap(a, 1); writeHeap(b, 2); v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v); v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v)
+SymTable:
+Output:
+Filetable:
+Heap:
+
+
+Id: 1
+Execution stack:
+RefType IntegerType a
+RefType IntegerType b; IntegerType v; new(a, 0); new(b, 0); writeHeap(a, 1); writeHeap(b, 2); v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v); v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v)
+SymTable:
+Output:
+Filetable:
+Heap:
+
+
+Id: 1
+Execution stack:
+RefType IntegerType b; IntegerType v; new(a, 0); new(b, 0); writeHeap(a, 1); writeHeap(b, 2); v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v); v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v)
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+
+Id: 1
+Execution stack:
+RefType IntegerType b
+IntegerType v; new(a, 0); new(b, 0); writeHeap(a, 1); writeHeap(b, 2); v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v); v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v)
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+
+Id: 1
+Execution stack:
+IntegerType v; new(a, 0); new(b, 0); writeHeap(a, 1); writeHeap(b, 2); v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v); v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v)
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+b(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+
+Id: 1
+Execution stack:
+IntegerType v
+new(a, 0); new(b, 0); writeHeap(a, 1); writeHeap(b, 2); v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v); v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v)
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+b(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+
+Id: 1
+Execution stack:
+new(a, 0); new(b, 0); writeHeap(a, 1); writeHeap(b, 2); v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v); v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v)
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+b(RefType IntegerType):-> Ref(0,IntegerType)
+v(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+Id: 1
+Execution stack:
+new(a, 0)
+new(b, 0); writeHeap(a, 1); writeHeap(b, 2); v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v); v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v)
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+b(RefType IntegerType):-> Ref(0,IntegerType)
+v(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+Id: 1
+Execution stack:
+new(b, 0); writeHeap(a, 1); writeHeap(b, 2); v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v); v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v)
+SymTable:
+a(RefType IntegerType):-> Ref(1,IntegerType)
+b(RefType IntegerType):-> Ref(0,IntegerType)
+v(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 0
+
+
+Id: 1
+Execution stack:
+new(b, 0)
+writeHeap(a, 1); writeHeap(b, 2); v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v); v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v)
+SymTable:
+a(RefType IntegerType):-> Ref(1,IntegerType)
+b(RefType IntegerType):-> Ref(0,IntegerType)
+v(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 0
+
+
+Id: 1
+Execution stack:
+writeHeap(a, 1); writeHeap(b, 2); v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v); v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v)
+SymTable:
+a(RefType IntegerType):-> Ref(1,IntegerType)
+b(RefType IntegerType):-> Ref(2,IntegerType)
+v(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 0
+2(IntegerType):-> 0
+
+
+Id: 1
+Execution stack:
+writeHeap(a, 1)
+writeHeap(b, 2); v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v); v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v)
+SymTable:
+a(RefType IntegerType):-> Ref(1,IntegerType)
+b(RefType IntegerType):-> Ref(2,IntegerType)
+v(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 0
+2(IntegerType):-> 0
+
+
+Id: 1
+Execution stack:
+writeHeap(b, 2); v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v); v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v)
+SymTable:
+a(RefType IntegerType):-> Ref(1,IntegerType)
+b(RefType IntegerType):-> Ref(2,IntegerType)
+v(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+2(IntegerType):-> 0
+
+
+Id: 1
+Execution stack:
+writeHeap(b, 2)
+v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v); v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v)
+SymTable:
+a(RefType IntegerType):-> Ref(1,IntegerType)
+b(RefType IntegerType):-> Ref(2,IntegerType)
+v(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+2(IntegerType):-> 0
+
+
+Id: 1
+Execution stack:
+v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v); v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v)
+SymTable:
+a(RefType IntegerType):-> Ref(1,IntegerType)
+b(RefType IntegerType):-> Ref(2,IntegerType)
+v(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+2(IntegerType):-> 2
+
+
+Id: 1
+Execution stack:
+v = ((readHeap(a) < readHeap(b))) ? 100 : 200
+print(v); v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v)
+SymTable:
+a(RefType IntegerType):-> Ref(1,IntegerType)
+b(RefType IntegerType):-> Ref(2,IntegerType)
+v(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+2(IntegerType):-> 2
+
+
+Id: 1
+Execution stack:
+if((readHeap(a) < readHeap(b)))then {v = 100} else {v = 200}
+print(v); v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v)
+SymTable:
+a(RefType IntegerType):-> Ref(1,IntegerType)
+b(RefType IntegerType):-> Ref(2,IntegerType)
+v(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+2(IntegerType):-> 2
+
+
+Id: 1
+Execution stack:
+v = 100
+print(v); v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v)
+SymTable:
+a(RefType IntegerType):-> Ref(1,IntegerType)
+b(RefType IntegerType):-> Ref(2,IntegerType)
+v(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+2(IntegerType):-> 2
+
+
+Id: 1
+Execution stack:
+print(v); v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v)
+SymTable:
+a(RefType IntegerType):-> Ref(1,IntegerType)
+b(RefType IntegerType):-> Ref(2,IntegerType)
+v(IntegerType):-> 100
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+2(IntegerType):-> 2
+
+
+Id: 1
+Execution stack:
+print(v)
+v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v)
+SymTable:
+a(RefType IntegerType):-> Ref(1,IntegerType)
+b(RefType IntegerType):-> Ref(2,IntegerType)
+v(IntegerType):-> 100
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+2(IntegerType):-> 2
+
+
+Id: 1
+Execution stack:
+v = ((readHeap(a) < readHeap(b))) ? 100 : 200; print(v)
+SymTable:
+a(RefType IntegerType):-> Ref(1,IntegerType)
+b(RefType IntegerType):-> Ref(2,IntegerType)
+v(IntegerType):-> 100
+Output:
+100
+Filetable:
+Heap:
+1(IntegerType):-> 1
+2(IntegerType):-> 2
+
+
+Id: 1
+Execution stack:
+v = ((readHeap(a) < readHeap(b))) ? 100 : 200
+print(v)
+SymTable:
+a(RefType IntegerType):-> Ref(1,IntegerType)
+b(RefType IntegerType):-> Ref(2,IntegerType)
+v(IntegerType):-> 100
+Output:
+100
+Filetable:
+Heap:
+1(IntegerType):-> 1
+2(IntegerType):-> 2
+
+
+Id: 1
+Execution stack:
+if((readHeap(a) < readHeap(b)))then {v = 100} else {v = 200}
+print(v)
+SymTable:
+a(RefType IntegerType):-> Ref(1,IntegerType)
+b(RefType IntegerType):-> Ref(2,IntegerType)
+v(IntegerType):-> 100
+Output:
+100
+Filetable:
+Heap:
+1(IntegerType):-> 1
+2(IntegerType):-> 2
+
+
+Id: 1
+Execution stack:
+v = 100
+print(v)
+SymTable:
+a(RefType IntegerType):-> Ref(1,IntegerType)
+b(RefType IntegerType):-> Ref(2,IntegerType)
+v(IntegerType):-> 100
+Output:
+100
+Filetable:
+Heap:
+1(IntegerType):-> 1
+2(IntegerType):-> 2
+
+
+Id: 1
+Execution stack:
+print(v)
+SymTable:
+a(RefType IntegerType):-> Ref(1,IntegerType)
+b(RefType IntegerType):-> Ref(2,IntegerType)
+v(IntegerType):-> 100
+Output:
+100
+Filetable:
+Heap:
+1(IntegerType):-> 1
+2(IntegerType):-> 2
+
+
+Id: 1
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(1,IntegerType)
+b(RefType IntegerType):-> Ref(2,IntegerType)
+v(IntegerType):-> 100
+Output:
+100
+100
+Filetable:
+Heap:
+1(IntegerType):-> 1
+2(IntegerType):-> 2
+
+
