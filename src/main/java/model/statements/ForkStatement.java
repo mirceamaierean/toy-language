@@ -15,7 +15,7 @@ public class ForkStatement implements IStatement {
 
     @Override
     public PrgState execute(PrgState state) throws AppException {
-        return new PrgState(new ExecutionStack(), state.getSymTable().copy(), state.getOutput(), innerStatement, state.getFileTable(), state.getHeap());
+        return new PrgState(new ExecutionStack(), state.getSymTable().copy(), state.getOutput(), innerStatement, state.getFileTable(), state.getHeap(), state.getSemaphore());
     }
 
     @Override
