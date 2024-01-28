@@ -5492,3 +5492,4744 @@ Heap:
 2(RefType IntegerType):-> Ref(1,IntegerType)
 
 
+Id: 1
+Execution stack:
+RefType IntegerType a; IntegerType count; While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+RefType IntegerType a
+IntegerType count; While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+IntegerType count; While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+IntegerType count
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+fork(fork(new(a, count); print(readHeap(a))))
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 2
+Execution stack:
+fork(new(a, count); print(readHeap(a)))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 1
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 2
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 3
+Execution stack:
+new(a, count); print(readHeap(a))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 1
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 3
+Execution stack:
+new(a, count)
+print(readHeap(a))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+fork(fork(new(a, count); print(readHeap(a))))
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 1
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 0
+
+
+
+Id: 3
+Execution stack:
+print(readHeap(a))
+SymTable:
+a(RefType IntegerType):-> Ref(1,IntegerType)
+count(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 0
+
+
+
+Id: 1
+Execution stack:
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 1
+Output:
+0
+Filetable:
+Heap:
+1(IntegerType):-> 0
+
+
+
+Id: 3
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(1,IntegerType)
+count(IntegerType):-> 0
+Output:
+0
+Filetable:
+Heap:
+1(IntegerType):-> 0
+
+
+
+Id: 4
+Execution stack:
+fork(new(a, count); print(readHeap(a)))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 1
+Output:
+0
+Filetable:
+Heap:
+1(IntegerType):-> 0
+
+
+
+Id: 1
+Execution stack:
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 2
+Output:
+0
+Filetable:
+Heap:
+
+
+
+Id: 4
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 1
+Output:
+0
+Filetable:
+Heap:
+
+
+
+Id: 5
+Execution stack:
+new(a, count); print(readHeap(a))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 1
+Output:
+0
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 2
+Output:
+0
+Filetable:
+Heap:
+
+
+
+Id: 5
+Execution stack:
+new(a, count)
+print(readHeap(a))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 1
+Output:
+0
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+fork(fork(new(a, count); print(readHeap(a))))
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 2
+Output:
+0
+Filetable:
+Heap:
+2(IntegerType):-> 1
+
+
+
+Id: 5
+Execution stack:
+print(readHeap(a))
+SymTable:
+a(RefType IntegerType):-> Ref(2,IntegerType)
+count(IntegerType):-> 1
+Output:
+0
+Filetable:
+Heap:
+2(IntegerType):-> 1
+
+
+
+Id: 1
+Execution stack:
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 2
+Output:
+0
+1
+Filetable:
+Heap:
+2(IntegerType):-> 1
+
+
+
+Id: 5
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(2,IntegerType)
+count(IntegerType):-> 1
+Output:
+0
+1
+Filetable:
+Heap:
+2(IntegerType):-> 1
+
+
+
+Id: 6
+Execution stack:
+fork(new(a, count); print(readHeap(a)))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 2
+Output:
+0
+1
+Filetable:
+Heap:
+2(IntegerType):-> 1
+
+
+
+Id: 1
+Execution stack:
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 3
+Output:
+0
+1
+Filetable:
+Heap:
+
+
+
+Id: 6
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 2
+Output:
+0
+1
+Filetable:
+Heap:
+
+
+
+Id: 7
+Execution stack:
+new(a, count); print(readHeap(a))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 2
+Output:
+0
+1
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 3
+Output:
+0
+1
+Filetable:
+Heap:
+
+
+
+Id: 7
+Execution stack:
+new(a, count)
+print(readHeap(a))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 2
+Output:
+0
+1
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+fork(fork(new(a, count); print(readHeap(a))))
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 3
+Output:
+0
+1
+Filetable:
+Heap:
+3(IntegerType):-> 2
+
+
+
+Id: 7
+Execution stack:
+print(readHeap(a))
+SymTable:
+a(RefType IntegerType):-> Ref(3,IntegerType)
+count(IntegerType):-> 2
+Output:
+0
+1
+Filetable:
+Heap:
+3(IntegerType):-> 2
+
+
+
+Id: 1
+Execution stack:
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 3
+Output:
+0
+1
+2
+Filetable:
+Heap:
+3(IntegerType):-> 2
+
+
+
+Id: 7
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(3,IntegerType)
+count(IntegerType):-> 2
+Output:
+0
+1
+2
+Filetable:
+Heap:
+3(IntegerType):-> 2
+
+
+
+Id: 8
+Execution stack:
+fork(new(a, count); print(readHeap(a)))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 3
+Output:
+0
+1
+2
+Filetable:
+Heap:
+3(IntegerType):-> 2
+
+
+
+Id: 1
+Execution stack:
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 4
+Output:
+0
+1
+2
+Filetable:
+Heap:
+
+
+
+Id: 8
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 3
+Output:
+0
+1
+2
+Filetable:
+Heap:
+
+
+
+Id: 9
+Execution stack:
+new(a, count); print(readHeap(a))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 3
+Output:
+0
+1
+2
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 4
+Output:
+0
+1
+2
+Filetable:
+Heap:
+
+
+
+Id: 9
+Execution stack:
+new(a, count)
+print(readHeap(a))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 3
+Output:
+0
+1
+2
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+fork(fork(new(a, count); print(readHeap(a))))
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 4
+Output:
+0
+1
+2
+Filetable:
+Heap:
+4(IntegerType):-> 3
+
+
+
+Id: 9
+Execution stack:
+print(readHeap(a))
+SymTable:
+a(RefType IntegerType):-> Ref(4,IntegerType)
+count(IntegerType):-> 3
+Output:
+0
+1
+2
+Filetable:
+Heap:
+4(IntegerType):-> 3
+
+
+
+Id: 1
+Execution stack:
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 4
+Output:
+0
+1
+2
+3
+Filetable:
+Heap:
+4(IntegerType):-> 3
+
+
+
+Id: 9
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(4,IntegerType)
+count(IntegerType):-> 3
+Output:
+0
+1
+2
+3
+Filetable:
+Heap:
+4(IntegerType):-> 3
+
+
+
+Id: 10
+Execution stack:
+fork(new(a, count); print(readHeap(a)))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 4
+Output:
+0
+1
+2
+3
+Filetable:
+Heap:
+4(IntegerType):-> 3
+
+
+
+Id: 1
+Execution stack:
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 5
+Output:
+0
+1
+2
+3
+Filetable:
+Heap:
+
+
+
+Id: 10
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 4
+Output:
+0
+1
+2
+3
+Filetable:
+Heap:
+
+
+
+Id: 11
+Execution stack:
+new(a, count); print(readHeap(a))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 4
+Output:
+0
+1
+2
+3
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 5
+Output:
+0
+1
+2
+3
+Filetable:
+Heap:
+
+
+
+Id: 11
+Execution stack:
+new(a, count)
+print(readHeap(a))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 4
+Output:
+0
+1
+2
+3
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+fork(fork(new(a, count); print(readHeap(a))))
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 5
+Output:
+0
+1
+2
+3
+Filetable:
+Heap:
+5(IntegerType):-> 4
+
+
+
+Id: 11
+Execution stack:
+print(readHeap(a))
+SymTable:
+a(RefType IntegerType):-> Ref(5,IntegerType)
+count(IntegerType):-> 4
+Output:
+0
+1
+2
+3
+Filetable:
+Heap:
+5(IntegerType):-> 4
+
+
+
+Id: 1
+Execution stack:
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 5
+Output:
+0
+1
+2
+3
+4
+Filetable:
+Heap:
+5(IntegerType):-> 4
+
+
+
+Id: 11
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(5,IntegerType)
+count(IntegerType):-> 4
+Output:
+0
+1
+2
+3
+4
+Filetable:
+Heap:
+5(IntegerType):-> 4
+
+
+
+Id: 12
+Execution stack:
+fork(new(a, count); print(readHeap(a)))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 5
+Output:
+0
+1
+2
+3
+4
+Filetable:
+Heap:
+5(IntegerType):-> 4
+
+
+
+Id: 1
+Execution stack:
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 6
+Output:
+0
+1
+2
+3
+4
+Filetable:
+Heap:
+
+
+
+Id: 12
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 5
+Output:
+0
+1
+2
+3
+4
+Filetable:
+Heap:
+
+
+
+Id: 13
+Execution stack:
+new(a, count); print(readHeap(a))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 5
+Output:
+0
+1
+2
+3
+4
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 6
+Output:
+0
+1
+2
+3
+4
+Filetable:
+Heap:
+
+
+
+Id: 13
+Execution stack:
+new(a, count)
+print(readHeap(a))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 5
+Output:
+0
+1
+2
+3
+4
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+fork(fork(new(a, count); print(readHeap(a))))
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 6
+Output:
+0
+1
+2
+3
+4
+Filetable:
+Heap:
+6(IntegerType):-> 5
+
+
+
+Id: 13
+Execution stack:
+print(readHeap(a))
+SymTable:
+a(RefType IntegerType):-> Ref(6,IntegerType)
+count(IntegerType):-> 5
+Output:
+0
+1
+2
+3
+4
+Filetable:
+Heap:
+6(IntegerType):-> 5
+
+
+
+Id: 1
+Execution stack:
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 6
+Output:
+0
+1
+2
+3
+4
+5
+Filetable:
+Heap:
+6(IntegerType):-> 5
+
+
+
+Id: 13
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(6,IntegerType)
+count(IntegerType):-> 5
+Output:
+0
+1
+2
+3
+4
+5
+Filetable:
+Heap:
+6(IntegerType):-> 5
+
+
+
+Id: 14
+Execution stack:
+fork(new(a, count); print(readHeap(a)))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 6
+Output:
+0
+1
+2
+3
+4
+5
+Filetable:
+Heap:
+6(IntegerType):-> 5
+
+
+
+Id: 1
+Execution stack:
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 7
+Output:
+0
+1
+2
+3
+4
+5
+Filetable:
+Heap:
+
+
+
+Id: 14
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 6
+Output:
+0
+1
+2
+3
+4
+5
+Filetable:
+Heap:
+
+
+
+Id: 15
+Execution stack:
+new(a, count); print(readHeap(a))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 6
+Output:
+0
+1
+2
+3
+4
+5
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 7
+Output:
+0
+1
+2
+3
+4
+5
+Filetable:
+Heap:
+
+
+
+Id: 15
+Execution stack:
+new(a, count)
+print(readHeap(a))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 6
+Output:
+0
+1
+2
+3
+4
+5
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+fork(fork(new(a, count); print(readHeap(a))))
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 7
+Output:
+0
+1
+2
+3
+4
+5
+Filetable:
+Heap:
+7(IntegerType):-> 6
+
+
+
+Id: 15
+Execution stack:
+print(readHeap(a))
+SymTable:
+a(RefType IntegerType):-> Ref(7,IntegerType)
+count(IntegerType):-> 6
+Output:
+0
+1
+2
+3
+4
+5
+Filetable:
+Heap:
+7(IntegerType):-> 6
+
+
+
+Id: 1
+Execution stack:
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 7
+Output:
+0
+1
+2
+3
+4
+5
+6
+Filetable:
+Heap:
+7(IntegerType):-> 6
+
+
+
+Id: 15
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(7,IntegerType)
+count(IntegerType):-> 6
+Output:
+0
+1
+2
+3
+4
+5
+6
+Filetable:
+Heap:
+7(IntegerType):-> 6
+
+
+
+Id: 16
+Execution stack:
+fork(new(a, count); print(readHeap(a)))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 7
+Output:
+0
+1
+2
+3
+4
+5
+6
+Filetable:
+Heap:
+7(IntegerType):-> 6
+
+
+
+Id: 1
+Execution stack:
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 8
+Output:
+0
+1
+2
+3
+4
+5
+6
+Filetable:
+Heap:
+
+
+
+Id: 16
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 7
+Output:
+0
+1
+2
+3
+4
+5
+6
+Filetable:
+Heap:
+
+
+
+Id: 17
+Execution stack:
+new(a, count); print(readHeap(a))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 7
+Output:
+0
+1
+2
+3
+4
+5
+6
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 8
+Output:
+0
+1
+2
+3
+4
+5
+6
+Filetable:
+Heap:
+
+
+
+Id: 17
+Execution stack:
+new(a, count)
+print(readHeap(a))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 7
+Output:
+0
+1
+2
+3
+4
+5
+6
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+fork(fork(new(a, count); print(readHeap(a))))
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 8
+Output:
+0
+1
+2
+3
+4
+5
+6
+Filetable:
+Heap:
+8(IntegerType):-> 7
+
+
+
+Id: 17
+Execution stack:
+print(readHeap(a))
+SymTable:
+a(RefType IntegerType):-> Ref(8,IntegerType)
+count(IntegerType):-> 7
+Output:
+0
+1
+2
+3
+4
+5
+6
+Filetable:
+Heap:
+8(IntegerType):-> 7
+
+
+
+Id: 1
+Execution stack:
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 8
+Output:
+0
+1
+2
+3
+4
+5
+6
+7
+Filetable:
+Heap:
+8(IntegerType):-> 7
+
+
+
+Id: 17
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(8,IntegerType)
+count(IntegerType):-> 7
+Output:
+0
+1
+2
+3
+4
+5
+6
+7
+Filetable:
+Heap:
+8(IntegerType):-> 7
+
+
+
+Id: 18
+Execution stack:
+fork(new(a, count); print(readHeap(a)))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 8
+Output:
+0
+1
+2
+3
+4
+5
+6
+7
+Filetable:
+Heap:
+8(IntegerType):-> 7
+
+
+
+Id: 1
+Execution stack:
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 9
+Output:
+0
+1
+2
+3
+4
+5
+6
+7
+Filetable:
+Heap:
+
+
+
+Id: 18
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 8
+Output:
+0
+1
+2
+3
+4
+5
+6
+7
+Filetable:
+Heap:
+
+
+
+Id: 19
+Execution stack:
+new(a, count); print(readHeap(a))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 8
+Output:
+0
+1
+2
+3
+4
+5
+6
+7
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 9
+Output:
+0
+1
+2
+3
+4
+5
+6
+7
+Filetable:
+Heap:
+
+
+
+Id: 19
+Execution stack:
+new(a, count)
+print(readHeap(a))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 8
+Output:
+0
+1
+2
+3
+4
+5
+6
+7
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+fork(fork(new(a, count); print(readHeap(a))))
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 9
+Output:
+0
+1
+2
+3
+4
+5
+6
+7
+Filetable:
+Heap:
+9(IntegerType):-> 8
+
+
+
+Id: 19
+Execution stack:
+print(readHeap(a))
+SymTable:
+a(RefType IntegerType):-> Ref(9,IntegerType)
+count(IntegerType):-> 8
+Output:
+0
+1
+2
+3
+4
+5
+6
+7
+Filetable:
+Heap:
+9(IntegerType):-> 8
+
+
+
+Id: 1
+Execution stack:
+count = (count + 1)
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 9
+Output:
+0
+1
+2
+3
+4
+5
+6
+7
+8
+Filetable:
+Heap:
+9(IntegerType):-> 8
+
+
+
+Id: 19
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(9,IntegerType)
+count(IntegerType):-> 8
+Output:
+0
+1
+2
+3
+4
+5
+6
+7
+8
+Filetable:
+Heap:
+9(IntegerType):-> 8
+
+
+
+Id: 20
+Execution stack:
+fork(new(a, count); print(readHeap(a)))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 9
+Output:
+0
+1
+2
+3
+4
+5
+6
+7
+8
+Filetable:
+Heap:
+9(IntegerType):-> 8
+
+
+
+Id: 1
+Execution stack:
+While((count < 10)){fork(fork(new(a, count); print(readHeap(a)))); count = (count + 1)};
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 10
+Output:
+0
+1
+2
+3
+4
+5
+6
+7
+8
+Filetable:
+Heap:
+
+
+
+Id: 20
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 9
+Output:
+0
+1
+2
+3
+4
+5
+6
+7
+8
+Filetable:
+Heap:
+
+
+
+Id: 21
+Execution stack:
+new(a, count); print(readHeap(a))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 9
+Output:
+0
+1
+2
+3
+4
+5
+6
+7
+8
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 10
+Output:
+0
+1
+2
+3
+4
+5
+6
+7
+8
+Filetable:
+Heap:
+
+
+
+Id: 21
+Execution stack:
+new(a, count)
+print(readHeap(a))
+SymTable:
+a(RefType IntegerType):-> Ref(0,IntegerType)
+count(IntegerType):-> 9
+Output:
+0
+1
+2
+3
+4
+5
+6
+7
+8
+Filetable:
+Heap:
+
+
+
+Id: 21
+Execution stack:
+print(readHeap(a))
+SymTable:
+a(RefType IntegerType):-> Ref(10,IntegerType)
+count(IntegerType):-> 9
+Output:
+0
+1
+2
+3
+4
+5
+6
+7
+8
+Filetable:
+Heap:
+10(IntegerType):-> 9
+
+
+
+Id: 21
+Execution stack:
+SymTable:
+a(RefType IntegerType):-> Ref(10,IntegerType)
+count(IntegerType):-> 9
+Output:
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Filetable:
+Heap:
+10(IntegerType):-> 9
+
+
+
+Id: 1
+Execution stack:
+RefType IntegerType v1; RefType IntegerType v2; RefType IntegerType v3; IntegerType cnt; new(v1, 2); new(v2, 3); new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+RefType IntegerType v1
+RefType IntegerType v2; RefType IntegerType v3; IntegerType cnt; new(v1, 2); new(v2, 3); new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+RefType IntegerType v2; RefType IntegerType v3; IntegerType cnt; new(v1, 2); new(v2, 3); new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+RefType IntegerType v2
+RefType IntegerType v3; IntegerType cnt; new(v1, 2); new(v2, 3); new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+RefType IntegerType v3; IntegerType cnt; new(v1, 2); new(v2, 3); new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+v2(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+RefType IntegerType v3
+IntegerType cnt; new(v1, 2); new(v2, 3); new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+v2(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+IntegerType cnt; new(v1, 2); new(v2, 3); new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+v2(RefType IntegerType):-> Ref(0,IntegerType)
+v3(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+IntegerType cnt
+new(v1, 2); new(v2, 3); new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+v2(RefType IntegerType):-> Ref(0,IntegerType)
+v3(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+new(v1, 2); new(v2, 3); new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+v2(RefType IntegerType):-> Ref(0,IntegerType)
+v3(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+new(v1, 2)
+new(v2, 3); new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+v2(RefType IntegerType):-> Ref(0,IntegerType)
+v3(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+new(v2, 3); new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(0,IntegerType)
+v3(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+
+
+
+Id: 1
+Execution stack:
+new(v2, 3)
+new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(0,IntegerType)
+v3(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+
+
+
+Id: 1
+Execution stack:
+new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+2(IntegerType):-> 3
+
+
+
+Id: 1
+Execution stack:
+new(v3, 4)
+newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+2(IntegerType):-> 3
+
+
+
+Id: 1
+Execution stack:
+newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+
+
+Id: 1
+Execution stack:
+newLatch(cnt, readHeap(v2))
+fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+
+
+Id: 1
+Execution stack:
+fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 1
+Execution stack:
+fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt))
+fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 1
+Execution stack:
+fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 2
+Execution stack:
+writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 1
+Execution stack:
+fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt))
+fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 2
+Execution stack:
+writeHeap(v1, (readHeap(v1) * 10))
+print(readHeap(v1)); countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 1
+Execution stack:
+fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 2
+Execution stack:
+print(readHeap(v1)); countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 3
+Execution stack:
+writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 1
+Execution stack:
+fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt))
+await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 2
+Execution stack:
+print(readHeap(v1))
+countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 3
+Execution stack:
+writeHeap(v2, (readHeap(v2) * 10))
+print(readHeap(v2)); countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 1
+Execution stack:
+await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 2
+Execution stack:
+countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 3
+Execution stack:
+print(readHeap(v2)); countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 4
+Execution stack:
+writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 1
+Execution stack:
+await(cnt)
+print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 4
+
+1 -> 2
+
+
+Id: 2
+Execution stack:
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 4
+
+1 -> 2
+
+
+Id: 3
+Execution stack:
+print(readHeap(v2))
+countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 4
+
+1 -> 2
+
+
+Id: 4
+Execution stack:
+writeHeap(v3, (readHeap(v3) * 10))
+print(readHeap(v3)); countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 4
+
+1 -> 2
+
+
+Id: 1
+Execution stack:
+await(cnt)
+print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+30
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 2
+
+
+Id: 3
+Execution stack:
+countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+30
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 2
+
+
+Id: 4
+Execution stack:
+print(readHeap(v3)); countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+30
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 2
+
+
+Id: 1
+Execution stack:
+await(cnt)
+print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+30
+3
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 1
+
+
+Id: 3
+Execution stack:
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+30
+3
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 1
+
+
+Id: 4
+Execution stack:
+print(readHeap(v3))
+countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+30
+3
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 1
+
+
+Id: 1
+Execution stack:
+await(cnt)
+print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+30
+3
+40
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 1
+
+
+Id: 4
+Execution stack:
+countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+30
+3
+40
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 1
+
+
+Id: 1
+Execution stack:
+await(cnt)
+print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+30
+3
+40
+4
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 0
+
+
+Id: 4
+Execution stack:
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+30
+3
+40
+4
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 0
+
+
+Id: 1
+Execution stack:
+print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+30
+3
+40
+4
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 0
+
+
+Id: 1
+Execution stack:
+print(100)
+countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+30
+3
+40
+4
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 0
+
+
+Id: 1
+Execution stack:
+countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+30
+3
+40
+4
+100
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 0
+
+
+Id: 1
+Execution stack:
+countDown(cnt)
+print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+30
+3
+40
+4
+100
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 0
+
+
+Id: 1
+Execution stack:
+print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+30
+3
+40
+4
+100
+1
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 0
+
+
+Id: 1
+Execution stack:
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+30
+3
+40
+4
+100
+1
+100
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 0
+
+
+Id: 5
+Execution stack:
+RefType IntegerType v1; RefType IntegerType v2; RefType IntegerType v3; IntegerType cnt; new(v1, 2); new(v2, 3); new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 5
+Execution stack:
+RefType IntegerType v1
+RefType IntegerType v2; RefType IntegerType v3; IntegerType cnt; new(v1, 2); new(v2, 3); new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 5
+Execution stack:
+RefType IntegerType v2; RefType IntegerType v3; IntegerType cnt; new(v1, 2); new(v2, 3); new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 5
+Execution stack:
+RefType IntegerType v2
+RefType IntegerType v3; IntegerType cnt; new(v1, 2); new(v2, 3); new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 5
+Execution stack:
+RefType IntegerType v3; IntegerType cnt; new(v1, 2); new(v2, 3); new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+v2(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 5
+Execution stack:
+RefType IntegerType v3
+IntegerType cnt; new(v1, 2); new(v2, 3); new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+v2(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 5
+Execution stack:
+IntegerType cnt; new(v1, 2); new(v2, 3); new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+v2(RefType IntegerType):-> Ref(0,IntegerType)
+v3(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 5
+Execution stack:
+IntegerType cnt
+new(v1, 2); new(v2, 3); new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+v2(RefType IntegerType):-> Ref(0,IntegerType)
+v3(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 5
+Execution stack:
+new(v1, 2); new(v2, 3); new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+v2(RefType IntegerType):-> Ref(0,IntegerType)
+v3(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 5
+Execution stack:
+new(v1, 2)
+new(v2, 3); new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+v2(RefType IntegerType):-> Ref(0,IntegerType)
+v3(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 5
+Execution stack:
+new(v2, 3); new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(0,IntegerType)
+v3(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+
+
+
+Id: 5
+Execution stack:
+new(v2, 3)
+new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(0,IntegerType)
+v3(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+
+
+
+Id: 5
+Execution stack:
+new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+2(IntegerType):-> 3
+
+
+
+Id: 5
+Execution stack:
+new(v3, 4)
+newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+2(IntegerType):-> 3
+
+
+
+Id: 5
+Execution stack:
+newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+
+
+Id: 5
+Execution stack:
+newLatch(cnt, readHeap(v2))
+fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+
+
+Id: 5
+Execution stack:
+fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 5
+Execution stack:
+fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt))
+fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 5
+Execution stack:
+fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 6
+Execution stack:
+writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 5
+Execution stack:
+fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt))
+fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 6
+Execution stack:
+writeHeap(v1, (readHeap(v1) * 10))
+print(readHeap(v1)); countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 5
+Execution stack:
+fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 6
+Execution stack:
+print(readHeap(v1)); countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 7
+Execution stack:
+writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 5
+Execution stack:
+fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt))
+await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 6
+Execution stack:
+print(readHeap(v1))
+countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 7
+Execution stack:
+writeHeap(v2, (readHeap(v2) * 10))
+print(readHeap(v2)); countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 5
+Execution stack:
+await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 6
+Execution stack:
+countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 7
+Execution stack:
+print(readHeap(v2)); countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 8
+Execution stack:
+writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 5
+Execution stack:
+await(cnt)
+print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+6
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 4
+
+1 -> 2
+
+
+Id: 6
+Execution stack:
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+6
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 4
+
+1 -> 2
+
+
+Id: 7
+Execution stack:
+print(readHeap(v2))
+countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+6
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 4
+
+1 -> 2
+
+
+Id: 8
+Execution stack:
+writeHeap(v3, (readHeap(v3) * 10))
+print(readHeap(v3)); countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+6
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 4
+
+1 -> 2
+
+
+Id: 5
+Execution stack:
+await(cnt)
+print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+6
+30
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 2
+
+
+Id: 7
+Execution stack:
+countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+6
+30
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 2
+
+
+Id: 8
+Execution stack:
+print(readHeap(v3)); countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+6
+30
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 2
+
+
+Id: 5
+Execution stack:
+await(cnt)
+print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+6
+30
+7
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 1
+
+
+Id: 7
+Execution stack:
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+6
+30
+7
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 1
+
+
+Id: 8
+Execution stack:
+print(readHeap(v3))
+countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+6
+30
+7
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 1
+
+
+Id: 5
+Execution stack:
+await(cnt)
+print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+6
+30
+7
+40
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 1
+
+
+Id: 8
+Execution stack:
+countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+6
+30
+7
+40
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 1
+
+
+Id: 5
+Execution stack:
+await(cnt)
+print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+6
+30
+7
+40
+8
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 0
+
+
+Id: 8
+Execution stack:
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+6
+30
+7
+40
+8
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 0
+
+
+Id: 5
+Execution stack:
+print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+6
+30
+7
+40
+8
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 0
+
+
+Id: 5
+Execution stack:
+print(100)
+countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+6
+30
+7
+40
+8
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 0
+
+
+Id: 5
+Execution stack:
+countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+6
+30
+7
+40
+8
+100
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 0
+
+
+Id: 5
+Execution stack:
+countDown(cnt)
+print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+6
+30
+7
+40
+8
+100
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 0
+
+
+Id: 5
+Execution stack:
+print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+6
+30
+7
+40
+8
+100
+5
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 0
+
+
+Id: 5
+Execution stack:
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+6
+30
+7
+40
+8
+100
+5
+100
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 0
+
+
+Id: 1
+Execution stack:
+RefType IntegerType v1; RefType IntegerType v2; RefType IntegerType v3; IntegerType cnt; new(v1, 2); new(v2, 3); new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+RefType IntegerType v1
+RefType IntegerType v2; RefType IntegerType v3; IntegerType cnt; new(v1, 2); new(v2, 3); new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+RefType IntegerType v2; RefType IntegerType v3; IntegerType cnt; new(v1, 2); new(v2, 3); new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+RefType IntegerType v2
+RefType IntegerType v3; IntegerType cnt; new(v1, 2); new(v2, 3); new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+RefType IntegerType v3; IntegerType cnt; new(v1, 2); new(v2, 3); new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+v2(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+RefType IntegerType v3
+IntegerType cnt; new(v1, 2); new(v2, 3); new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+v2(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+IntegerType cnt; new(v1, 2); new(v2, 3); new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+v2(RefType IntegerType):-> Ref(0,IntegerType)
+v3(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+IntegerType cnt
+new(v1, 2); new(v2, 3); new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+v2(RefType IntegerType):-> Ref(0,IntegerType)
+v3(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+new(v1, 2); new(v2, 3); new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+v2(RefType IntegerType):-> Ref(0,IntegerType)
+v3(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+new(v1, 2)
+new(v2, 3); new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+v2(RefType IntegerType):-> Ref(0,IntegerType)
+v3(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+
+
+Id: 1
+Execution stack:
+new(v2, 3); new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(0,IntegerType)
+v3(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+
+
+
+Id: 1
+Execution stack:
+new(v2, 3)
+new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(0,IntegerType)
+v3(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+
+
+
+Id: 1
+Execution stack:
+new(v3, 4); newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+2(IntegerType):-> 3
+
+
+
+Id: 1
+Execution stack:
+new(v3, 4)
+newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+2(IntegerType):-> 3
+
+
+
+Id: 1
+Execution stack:
+newLatch(cnt, readHeap(v2)); fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+
+
+Id: 1
+Execution stack:
+newLatch(cnt, readHeap(v2))
+fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+
+
+Id: 1
+Execution stack:
+fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)); fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 1
+Execution stack:
+fork(writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt))
+fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 1
+Execution stack:
+fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)); fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 2
+Execution stack:
+writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 1
+Execution stack:
+fork(writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt))
+fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 2
+Execution stack:
+writeHeap(v1, (readHeap(v1) * 10))
+print(readHeap(v1)); countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 2
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 1
+Execution stack:
+fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)); await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 2
+Execution stack:
+print(readHeap(v1)); countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 3
+Execution stack:
+writeHeap(v2, (readHeap(v2) * 10)); print(readHeap(v2)); countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 1
+Execution stack:
+fork(writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt))
+await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 2
+Execution stack:
+print(readHeap(v1))
+countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 3
+Execution stack:
+writeHeap(v2, (readHeap(v2) * 10))
+print(readHeap(v2)); countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 3
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 1
+Execution stack:
+await(cnt); print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 2
+Execution stack:
+countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 3
+Execution stack:
+print(readHeap(v2)); countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 4
+Execution stack:
+writeHeap(v3, (readHeap(v3) * 10)); print(readHeap(v3)); countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 4
+
+1 -> 3
+
+
+Id: 1
+Execution stack:
+await(cnt)
+print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 4
+
+1 -> 2
+
+
+Id: 2
+Execution stack:
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 4
+
+1 -> 2
+
+
+Id: 3
+Execution stack:
+print(readHeap(v2))
+countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 4
+
+1 -> 2
+
+
+Id: 4
+Execution stack:
+writeHeap(v3, (readHeap(v3) * 10))
+print(readHeap(v3)); countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 4
+
+1 -> 2
+
+
+Id: 1
+Execution stack:
+await(cnt)
+print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+30
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 2
+
+
+Id: 3
+Execution stack:
+countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+30
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 2
+
+
+Id: 4
+Execution stack:
+print(readHeap(v3)); countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+30
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 2
+
+
+Id: 1
+Execution stack:
+await(cnt)
+print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+30
+3
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 1
+
+
+Id: 3
+Execution stack:
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+30
+3
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 1
+
+
+Id: 4
+Execution stack:
+print(readHeap(v3))
+countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+30
+3
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 1
+
+
+Id: 1
+Execution stack:
+await(cnt)
+print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+30
+3
+40
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 1
+
+
+Id: 4
+Execution stack:
+countDown(cnt)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+30
+3
+40
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 1
+
+
+Id: 1
+Execution stack:
+await(cnt)
+print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+30
+3
+40
+4
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 0
+
+
+Id: 4
+Execution stack:
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+30
+3
+40
+4
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 0
+
+
+Id: 1
+Execution stack:
+print(100); countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+30
+3
+40
+4
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 0
+
+
+Id: 1
+Execution stack:
+print(100)
+countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+30
+3
+40
+4
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 0
+
+
+Id: 1
+Execution stack:
+countDown(cnt); print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+30
+3
+40
+4
+100
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 0
+
+
+Id: 1
+Execution stack:
+countDown(cnt)
+print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+30
+3
+40
+4
+100
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 0
+
+
+Id: 1
+Execution stack:
+print(100)
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+30
+3
+40
+4
+100
+1
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 0
+
+
+Id: 1
+Execution stack:
+SymTable:
+cnt(IntegerType):-> 1
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+v2(RefType IntegerType):-> Ref(2,IntegerType)
+v3(RefType IntegerType):-> Ref(3,IntegerType)
+Output:
+20
+2
+30
+3
+40
+4
+100
+1
+100
+Filetable:
+Heap:
+1(IntegerType):-> 20
+2(IntegerType):-> 30
+3(IntegerType):-> 40
+
+1 -> 0
+
+

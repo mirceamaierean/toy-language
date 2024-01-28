@@ -16,7 +16,7 @@ public class Main {
         IController controller = new Controller(repository, Executors.newFixedThreadPool(2),true);
         view.GUI.MainView.setController(controller);
         IMainView view = new view.GUI.MainView();
-        //IMainView view = new view.CLI.MainView(controller);
+//        //IMainView view = new view.CLI.MainView(controller);
         view.run(args);
     }
 }

@@ -28,5 +28,72 @@ public class HardcodedPrograms {
             new CompositeStatement(new VariableDeclarationStatement("v",new RefType(new IntegerType())), new CompositeStatement(new NewStatement("v", new ConstantExpression(new IntegerValue(20))), new CompositeStatement(new VariableDeclarationStatement("a",new RefType(new RefType(new IntegerType()))), new CompositeStatement(new NewStatement("a", new VariableExpression("v")), new CompositeStatement(new NewStatement("v", new ConstantExpression(new IntegerValue(30))), new PrintStatement(new ReadHeapFunction(new ReadHeapFunction(new VariableExpression("a"))))))))),
             new CompositeStatement(new VariableDeclarationStatement("v",new IntegerType()), new CompositeStatement(new AssignmentStatement("v",new ConstantExpression(new IntegerValue(4))), new CompositeStatement(new WhileStatement(new BinaryExpression(new VariableExpression("v"),new ConstantExpression(new IntegerValue(0)),">"), new CompositeStatement(new PrintStatement(new VariableExpression("v")), new AssignmentStatement("v",new BinaryExpression(new VariableExpression("v"),new ConstantExpression(new IntegerValue(1)),"-")))), new PrintStatement(new VariableExpression("v"))))),
             new CompositeStatement(new VariableDeclarationStatement("v",new IntegerType()), new CompositeStatement(new VariableDeclarationStatement("a",new RefType(new IntegerType())), new CompositeStatement(new AssignmentStatement("v",new ConstantExpression(new IntegerValue(10))), new CompositeStatement(new NewStatement("a", new ConstantExpression(new IntegerValue(22))), new CompositeStatement(new ForkStatement(new CompositeStatement(new WriteHeapStatement(new VariableExpression("a"), new ConstantExpression(new IntegerValue(30))), new CompositeStatement(new AssignmentStatement("v",new ConstantExpression(new IntegerValue(32))), new CompositeStatement(new PrintStatement(new VariableExpression("v")), new PrintStatement(new ReadHeapFunction(new VariableExpression("a"))))))), new CompositeStatement(new PrintStatement(new VariableExpression("v")), new PrintStatement(new ReadHeapFunction(new VariableExpression("a"))))))))),
-            new CompositeStatement(new VariableDeclarationStatement("a", new RefType(new IntegerType())), new CompositeStatement(new VariableDeclarationStatement("count", new IntegerType()), new WhileStatement(new BinaryExpression(new VariableExpression("count"), new ConstantExpression(new IntegerValue(10)), "<"), new CompositeStatement(new ForkStatement(new ForkStatement(new CompositeStatement(new NewStatement("a", new VariableExpression("count")), new PrintStatement(new ReadHeapFunction(new VariableExpression("a")))))), new AssignmentStatement("count", new BinaryExpression(new VariableExpression("count"), new ConstantExpression(new IntegerValue(1)), "+"))))))));
+            new CompositeStatement(new VariableDeclarationStatement("a", new RefType(new IntegerType())), new CompositeStatement(new VariableDeclarationStatement("count", new IntegerType()), new WhileStatement(new BinaryExpression(new VariableExpression("count"), new ConstantExpression(new IntegerValue(10)), "<"), new CompositeStatement(new ForkStatement(new ForkStatement(new CompositeStatement(new NewStatement("a", new VariableExpression("count")), new PrintStatement(new ReadHeapFunction(new VariableExpression("a")))))), new AssignmentStatement("count", new BinaryExpression(new VariableExpression("count"), new ConstantExpression(new IntegerValue(1)), "+")))))),
+            new CompositeStatement(
+                    new VariableDeclarationStatement("v1", new RefType(new IntegerType())),
+                    new CompositeStatement(
+                            new VariableDeclarationStatement("v2", new RefType(new IntegerType())),
+                            new CompositeStatement(
+                                    new VariableDeclarationStatement("v3", new RefType(new IntegerType())),
+                                    new CompositeStatement(
+                                            new VariableDeclarationStatement("cnt", new IntegerType()),
+                                            new CompositeStatement(
+                                                    new NewStatement("v1", new ConstantExpression(new IntegerValue(2))),
+                                                    new CompositeStatement(
+                                                            new NewStatement("v2", new ConstantExpression(new IntegerValue(3))),
+                                                            new CompositeStatement(
+                                                                    new NewStatement("v3", new ConstantExpression(new IntegerValue(4))),
+                                                                    new CompositeStatement(
+                                                                            new NewLatchStatement("cnt", new ReadHeapFunction(new VariableExpression("v2"))),
+                                                                            new CompositeStatement(
+                                                                                    new ForkStatement(
+                                                                                            new CompositeStatement(
+                                                                                                    new WriteHeapStatement(new VariableExpression("v1"), new BinaryExpression(new ReadHeapFunction(new VariableExpression("v1")), new ConstantExpression(new IntegerValue(10)), "*")),
+                                                                                                    new CompositeStatement(
+                                                                                                            new PrintStatement(new ReadHeapFunction(new VariableExpression("v1"))),
+                                                                                                            new CountDownStatement("cnt")
+                                                                                                    )
+                                                                                            )
+                                                                                    ),
+                                                                                    new CompositeStatement(
+                                                                                            new ForkStatement(
+                                                                                                    new CompositeStatement(
+                                                                                                            new WriteHeapStatement(new VariableExpression("v2"), new BinaryExpression(new ReadHeapFunction(new VariableExpression("v2")), new ConstantExpression(new IntegerValue(10)), "*")),
+                                                                                                            new CompositeStatement(
+                                                                                                                    new PrintStatement(new ReadHeapFunction(new VariableExpression("v2"))),
+                                                                                                                    new CountDownStatement("cnt")
+                                                                                                            )
+                                                                                                    )
+                                                                                            ),
+                                                                                            new CompositeStatement(
+                                                                                                    new ForkStatement(
+                                                                                                            new CompositeStatement(
+                                                                                                                    new WriteHeapStatement(new VariableExpression("v3"), new BinaryExpression(new ReadHeapFunction(new VariableExpression("v3")), new ConstantExpression(new IntegerValue(10)), "*")),
+                                                                                                                    new CompositeStatement(
+                                                                                                                            new PrintStatement(new ReadHeapFunction(new VariableExpression("v3"))),
+                                                                                                                            new CountDownStatement("cnt")
+                                                                                                                    )
+                                                                                                            )
+                                                                                                    ),
+                                                                                                    new CompositeStatement(
+                                                                                                            new AwaitLatchStatement("cnt"),
+                                                                                                            new CompositeStatement(
+                                                                                                                    new PrintStatement(new ConstantExpression(new IntegerValue(100))),
+                                                                                                                    new CompositeStatement(
+                                                                                                                            new CountDownStatement("cnt"),
+                                                                                                                            new PrintStatement(new ConstantExpression(new IntegerValue(100)))
+                                                                                                                    )
+                                                                                                            )
+                                                                                                    )
+                                                                                            )
+                                                                                    )
+                                                                            )
+                                                                    )
+                                                            )
+                                                    )
+                                            )
+                                    )
+                            )
+                    )
+            )));
 }
