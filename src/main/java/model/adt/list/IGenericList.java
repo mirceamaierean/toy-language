@@ -3,9 +3,9 @@ package model.adt.list;
 import java.util.List;
 
 public interface IGenericList<T> {
-    void add(T element);
-
+    void addToEnd(T elem);
+    List<T> getAll();
     void clear();
 
-    List<T> getAll();
+    boolean remove(T elem);
 }

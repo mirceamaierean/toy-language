@@ -1,13 +1,13 @@
 package model.adt.list;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.LinkedList;
 
-public class GenericList<T> implements IGenericList<T> {
-    private List<T> output;
+public class GenericList<T> implements IGenericList<T>{
+    List<T> data;
 
     public GenericList() {
-        output = new LinkedList<>();
+        data = new ArrayList<>();
     }
 
     public GenericList(List<T> data) {
@@ -17,11 +17,12 @@ public class GenericList<T> implements IGenericList<T> {
     @Override
     public void add(T element) {
         output.add(element);
+        this.data = data;
     }
 
     @Override
-    public void clear() {
-        output.clear();
+    public void addToEnd(T elem) {
+        data.add(elem);
     }
 
     @Override
@@ -31,14 +32,17 @@ public class GenericList<T> implements IGenericList<T> {
             result.append(element.toString()).append("\n");
         }
         return "GenericList{" + "output = " + result + '}';
+    public List<T> getAll() {
+        return data;
     }
 
     @Override
-    public List<T> getAll() {
-        return output;
+    public void clear() {
+        this.data.clear();
     }
 
-    public void setOutput(List<T> output) {
-        this.output = output;
+    @Override
+    public boolean remove(T elem) {
+        return data.remove(elem);
     }
 }

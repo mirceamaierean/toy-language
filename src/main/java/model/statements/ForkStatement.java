@@ -6,7 +6,7 @@ import model.state.ExecutionStack;
 import model.state.PrgState;
 import model.values.types.IType;
 
-public class ForkStatement implements IStatement {
+public class ForkStatement implements IStatement{
     IStatement innerStatement;
 
     public ForkStatement(IStatement innerStatement) {
@@ -15,16 +15,15 @@ public class ForkStatement implements IStatement {
 
     @Override
     public PrgState execute(PrgState state) throws AppException {
-        return new PrgState(new ExecutionStack(), state.getSymTable().copy(), state.getOutput(), innerStatement, state.getFileTable(), state.getHeap());
+        return new PrgState(new ExecutionStack(), state.getSymTable().copy(), state.getOutput(), innerStatement, state.getFileTable(), state.getHeap(), state.getSemaphoreTable());
     }
-
     @Override
-    public String toString() {
+    public String toString(){
         return "fork(" + innerStatement.toString() + ")";
     }
 
     @Override
     public IGenericDictionary<String, IType> typecheck(IGenericDictionary<String, IType> typeDictionary) throws AppException {
-        return innerStatement.typecheck(typeDictionary);
+        return innerStatement.typecheck(typeDictionary.copy());
     }
 }
