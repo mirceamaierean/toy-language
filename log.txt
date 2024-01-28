@@ -6174,3 +6174,1539 @@ Heap:
 
 model.state.SemaphoreTable@7cb6c2e6
 
+Id: 0
+Execution stack:
+RefType IntegerType v1; IntegerType cnt; new(v1, 1); createSemaphore(cnt, readHeap(v1)); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")); acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+Output:
+Filetable:
+Heap:
+
+model.state.SemaphoreTable@5eacb84c
+
+Id: 0
+Execution stack:
+RefType IntegerType v1; IntegerType cnt; new(v1, 1); createSemaphore(cnt, readHeap(v1)); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")); acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+Output:
+Filetable:
+Heap:
+
+model.state.SemaphoreTable@6013a784
+
+Id: 0
+Execution stack:
+RefType IntegerType v1
+IntegerType cnt; new(v1, 1); createSemaphore(cnt, readHeap(v1)); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")); acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+Output:
+Filetable:
+Heap:
+
+model.state.SemaphoreTable@6013a784
+
+Id: 0
+Execution stack:
+IntegerType cnt; new(v1, 1); createSemaphore(cnt, readHeap(v1)); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")); acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+model.state.SemaphoreTable@6013a784
+
+Id: 0
+Execution stack:
+IntegerType cnt
+new(v1, 1); createSemaphore(cnt, readHeap(v1)); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")); acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+model.state.SemaphoreTable@6013a784
+
+Id: 0
+Execution stack:
+new(v1, 1); createSemaphore(cnt, readHeap(v1)); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")); acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+model.state.SemaphoreTable@6013a784
+
+Id: 0
+Execution stack:
+new(v1, 1)
+createSemaphore(cnt, readHeap(v1)); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")); acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+model.state.SemaphoreTable@6013a784
+
+Id: 0
+Execution stack:
+createSemaphore(cnt, readHeap(v1)); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")); acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+
+model.state.SemaphoreTable@6013a784
+
+Id: 0
+Execution stack:
+createSemaphore(cnt, readHeap(v1))
+fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")); acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+
+model.state.SemaphoreTable@6013a784
+
+Id: 0
+Execution stack:
+fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")); acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+
+model.state.SemaphoreTable@6013a784
+
+Id: 0
+Execution stack:
+fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt"))
+fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")); acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+
+model.state.SemaphoreTable@6013a784
+
+Id: 0
+Execution stack:
+fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")); acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+
+model.state.SemaphoreTable@6013a784
+
+Id: 1
+Execution stack:
+acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+
+model.state.SemaphoreTable@6013a784
+
+Id: 0
+Execution stack:
+fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt"))
+acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+
+model.state.SemaphoreTable@6013a784
+
+Id: 1
+Execution stack:
+acquire(cnt)
+writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+
+model.state.SemaphoreTable@6013a784
+
+Id: 0
+Execution stack:
+acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+
+model.state.SemaphoreTable@6013a784
+
+Id: 1
+Execution stack:
+writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+
+model.state.SemaphoreTable@6013a784
+
+Id: 2
+Execution stack:
+acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+
+model.state.SemaphoreTable@6013a784
+
+Id: 0
+Execution stack:
+acquire(cnt)
+print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+
+model.state.SemaphoreTable@6013a784
+
+Id: 1
+Execution stack:
+writeHeap(v1, (readHeap(v1) * 10))
+print(readHeap(v1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+
+model.state.SemaphoreTable@6013a784
+
+Id: 2
+Execution stack:
+acquire(cnt)
+writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+
+model.state.SemaphoreTable@6013a784
+
+Id: 0
+Execution stack:
+acquire(cnt)
+print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 10
+
+model.state.SemaphoreTable@6013a784
+
+Id: 1
+Execution stack:
+print(readHeap(v1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 10
+
+model.state.SemaphoreTable@6013a784
+
+Id: 2
+Execution stack:
+acquire(cnt)
+writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 10
+
+model.state.SemaphoreTable@6013a784
+
+Id: 0
+Execution stack:
+acquire(cnt)
+print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 10
+
+model.state.SemaphoreTable@6013a784
+
+Id: 1
+Execution stack:
+print(readHeap(v1))
+release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 10
+
+model.state.SemaphoreTable@6013a784
+
+Id: 2
+Execution stack:
+acquire(cnt)
+writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 10
+
+model.state.SemaphoreTable@6013a784
+
+Id: 0
+Execution stack:
+acquire(cnt)
+print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 10
+
+model.state.SemaphoreTable@6013a784
+
+Id: 1
+Execution stack:
+release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 10
+
+model.state.SemaphoreTable@6013a784
+
+Id: 2
+Execution stack:
+acquire(cnt)
+writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 10
+
+model.state.SemaphoreTable@6013a784
+
+Id: 0
+Execution stack:
+acquire(cnt)
+print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 10
+
+model.state.SemaphoreTable@6013a784
+
+Id: 1
+Execution stack:
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 10
+
+model.state.SemaphoreTable@6013a784
+
+Id: 2
+Execution stack:
+writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 10
+
+model.state.SemaphoreTable@6013a784
+
+Id: 0
+Execution stack:
+acquire(cnt)
+print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 10
+
+model.state.SemaphoreTable@6013a784
+
+Id: 2
+Execution stack:
+writeHeap(v1, (readHeap(v1) * 10))
+writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 10
+
+model.state.SemaphoreTable@6013a784
+
+Id: 0
+Execution stack:
+acquire(cnt)
+print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 100
+
+model.state.SemaphoreTable@6013a784
+
+Id: 2
+Execution stack:
+writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 100
+
+model.state.SemaphoreTable@6013a784
+
+Id: 0
+Execution stack:
+acquire(cnt)
+print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 100
+
+model.state.SemaphoreTable@6013a784
+
+Id: 2
+Execution stack:
+writeHeap(v1, (readHeap(v1) * 2))
+print(readHeap(v1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 100
+
+model.state.SemaphoreTable@6013a784
+
+Id: 0
+Execution stack:
+acquire(cnt)
+print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 200
+
+model.state.SemaphoreTable@6013a784
+
+Id: 2
+Execution stack:
+print(readHeap(v1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 200
+
+model.state.SemaphoreTable@6013a784
+
+Id: 0
+Execution stack:
+acquire(cnt)
+print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 200
+
+model.state.SemaphoreTable@6013a784
+
+Id: 2
+Execution stack:
+print(readHeap(v1))
+release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 200
+
+model.state.SemaphoreTable@6013a784
+
+Id: 0
+Execution stack:
+acquire(cnt)
+print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+200
+Filetable:
+Heap:
+1(IntegerType):-> 200
+
+model.state.SemaphoreTable@6013a784
+
+Id: 2
+Execution stack:
+release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+200
+Filetable:
+Heap:
+1(IntegerType):-> 200
+
+model.state.SemaphoreTable@6013a784
+
+Id: 0
+Execution stack:
+acquire(cnt)
+print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+200
+Filetable:
+Heap:
+1(IntegerType):-> 200
+
+model.state.SemaphoreTable@6013a784
+
+Id: 2
+Execution stack:
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+200
+Filetable:
+Heap:
+1(IntegerType):-> 200
+
+model.state.SemaphoreTable@6013a784
+
+Id: 0
+Execution stack:
+print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+200
+Filetable:
+Heap:
+1(IntegerType):-> 200
+
+model.state.SemaphoreTable@6013a784
+
+Id: 0
+Execution stack:
+print((readHeap(v1) - 1))
+release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+200
+Filetable:
+Heap:
+1(IntegerType):-> 200
+
+model.state.SemaphoreTable@6013a784
+
+Id: 0
+Execution stack:
+release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+200
+199
+Filetable:
+Heap:
+1(IntegerType):-> 200
+
+model.state.SemaphoreTable@6013a784
+
+Id: 0
+Execution stack:
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+200
+199
+Filetable:
+Heap:
+1(IntegerType):-> 200
+
+model.state.SemaphoreTable@6013a784
+
+Id: 0
+Execution stack:
+RefType IntegerType v1; IntegerType cnt; new(v1, 1); createSemaphore(cnt, readHeap(v1)); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")); acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+Output:
+Filetable:
+Heap:
+
+model.state.SemaphoreTable@34bf3b44
+
+Id: 0
+Execution stack:
+RefType IntegerType v1
+IntegerType cnt; new(v1, 1); createSemaphore(cnt, readHeap(v1)); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")); acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+Output:
+Filetable:
+Heap:
+
+model.state.SemaphoreTable@34bf3b44
+
+Id: 0
+Execution stack:
+IntegerType cnt; new(v1, 1); createSemaphore(cnt, readHeap(v1)); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")); acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+model.state.SemaphoreTable@34bf3b44
+
+Id: 0
+Execution stack:
+IntegerType cnt
+new(v1, 1); createSemaphore(cnt, readHeap(v1)); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")); acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+model.state.SemaphoreTable@34bf3b44
+
+Id: 0
+Execution stack:
+new(v1, 1); createSemaphore(cnt, readHeap(v1)); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")); acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+model.state.SemaphoreTable@34bf3b44
+
+Id: 0
+Execution stack:
+new(v1, 1)
+createSemaphore(cnt, readHeap(v1)); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")); acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+model.state.SemaphoreTable@34bf3b44
+
+Id: 0
+Execution stack:
+createSemaphore(cnt, readHeap(v1)); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")); acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+
+model.state.SemaphoreTable@34bf3b44
+
+Id: 0
+Execution stack:
+createSemaphore(cnt, readHeap(v1))
+fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")); acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+
+model.state.SemaphoreTable@34bf3b44
+
+Id: 0
+Execution stack:
+RefType IntegerType v1; IntegerType cnt; new(v1, 1); createSemaphore(cnt, readHeap(v1)); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")); acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+Output:
+Filetable:
+Heap:
+
+model.state.SemaphoreTable@4536b66b
+
+Id: 0
+Execution stack:
+RefType IntegerType v1; IntegerType cnt; new(v1, 1); createSemaphore(cnt, readHeap(v1)); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")); acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+Output:
+Filetable:
+Heap:
+
+model.state.SemaphoreTable@34597235
+
+Id: 0
+Execution stack:
+RefType IntegerType v1; IntegerType cnt; new(v1, 1); createSemaphore(cnt, readHeap(v1)); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")); acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+Output:
+Filetable:
+Heap:
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 0
+Execution stack:
+RefType IntegerType v1
+IntegerType cnt; new(v1, 1); createSemaphore(cnt, readHeap(v1)); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")); acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+Output:
+Filetable:
+Heap:
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 0
+Execution stack:
+IntegerType cnt; new(v1, 1); createSemaphore(cnt, readHeap(v1)); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")); acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 0
+Execution stack:
+IntegerType cnt
+new(v1, 1); createSemaphore(cnt, readHeap(v1)); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")); acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 0
+Execution stack:
+new(v1, 1); createSemaphore(cnt, readHeap(v1)); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")); acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 0
+Execution stack:
+new(v1, 1)
+createSemaphore(cnt, readHeap(v1)); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")); acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(0,IntegerType)
+Output:
+Filetable:
+Heap:
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 0
+Execution stack:
+createSemaphore(cnt, readHeap(v1)); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")); acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 0
+Execution stack:
+createSemaphore(cnt, readHeap(v1))
+fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")); acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 0
+Execution stack:
+fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")); fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")); acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 0
+Execution stack:
+fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt"))
+fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")); acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 0
+Execution stack:
+fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")); acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 1
+Execution stack:
+acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 0
+Execution stack:
+fork(acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt"))
+acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 1
+Execution stack:
+acquire(cnt)
+writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 0
+Execution stack:
+acquire(cnt); print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 1
+Execution stack:
+writeHeap(v1, (readHeap(v1) * 10)); print(readHeap(v1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 2
+Execution stack:
+acquire(cnt); writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 0
+Execution stack:
+acquire(cnt)
+print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 1
+Execution stack:
+writeHeap(v1, (readHeap(v1) * 10))
+print(readHeap(v1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 2
+Execution stack:
+acquire(cnt)
+writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 1
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 0
+Execution stack:
+acquire(cnt)
+print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 10
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 1
+Execution stack:
+print(readHeap(v1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 10
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 2
+Execution stack:
+acquire(cnt)
+writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 10
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 0
+Execution stack:
+acquire(cnt)
+print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 10
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 1
+Execution stack:
+print(readHeap(v1))
+release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 10
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 2
+Execution stack:
+acquire(cnt)
+writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+Filetable:
+Heap:
+1(IntegerType):-> 10
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 0
+Execution stack:
+acquire(cnt)
+print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 10
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 1
+Execution stack:
+release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 10
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 2
+Execution stack:
+acquire(cnt)
+writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 10
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 0
+Execution stack:
+acquire(cnt)
+print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 10
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 1
+Execution stack:
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 10
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 2
+Execution stack:
+acquire(cnt)
+writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 10
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 0
+Execution stack:
+acquire(cnt)
+print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 10
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 2
+Execution stack:
+writeHeap(v1, (readHeap(v1) * 10)); writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 10
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 0
+Execution stack:
+acquire(cnt)
+print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 10
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 2
+Execution stack:
+writeHeap(v1, (readHeap(v1) * 10))
+writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 10
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 0
+Execution stack:
+acquire(cnt)
+print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 100
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 2
+Execution stack:
+writeHeap(v1, (readHeap(v1) * 2)); print(readHeap(v1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 100
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 0
+Execution stack:
+acquire(cnt)
+print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 100
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 2
+Execution stack:
+writeHeap(v1, (readHeap(v1) * 2))
+print(readHeap(v1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 100
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 0
+Execution stack:
+acquire(cnt)
+print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 200
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 2
+Execution stack:
+print(readHeap(v1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 200
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 0
+Execution stack:
+acquire(cnt)
+print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 200
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 2
+Execution stack:
+print(readHeap(v1))
+release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+Filetable:
+Heap:
+1(IntegerType):-> 200
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 0
+Execution stack:
+acquire(cnt)
+print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+200
+Filetable:
+Heap:
+1(IntegerType):-> 200
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 2
+Execution stack:
+release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+200
+Filetable:
+Heap:
+1(IntegerType):-> 200
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 0
+Execution stack:
+print((readHeap(v1) - 1)); release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+200
+Filetable:
+Heap:
+1(IntegerType):-> 200
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 2
+Execution stack:
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+200
+Filetable:
+Heap:
+1(IntegerType):-> 200
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 0
+Execution stack:
+print((readHeap(v1) - 1))
+release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+200
+Filetable:
+Heap:
+1(IntegerType):-> 200
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 0
+Execution stack:
+release("cnt")
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+200
+199
+Filetable:
+Heap:
+1(IntegerType):-> 200
+
+model.state.SemaphoreTable@72ab93a3
+
+Id: 0
+Execution stack:
+SymTable:
+cnt(IntegerType):-> 0
+v1(RefType IntegerType):-> Ref(1,IntegerType)
+Output:
+10
+200
+199
+Filetable:
+Heap:
+1(IntegerType):-> 200
+
+model.state.SemaphoreTable@72ab93a3
+

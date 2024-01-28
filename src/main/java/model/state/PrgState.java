@@ -6,8 +6,8 @@ import model.statements.IStatement;
 
 public class PrgState {
 
-    int id;
     static int nextId = 0;
+    int id;
     IExecutionStack executionStack;
     ISymTable symTable;
     IOutput output;
@@ -17,8 +17,8 @@ public class PrgState {
 
     ISemaphoreTable semaphoreTable;
 
-    public PrgState(IExecutionStack executionStack, ISymTable symTable, IOutput output, IStatement statement, IFileTable fileTable, IHeap heap, ISemaphoreTable semahporeTable){
-        synchronized (PrgState.class){
+    public PrgState(IExecutionStack executionStack, ISymTable symTable, IOutput output, IStatement statement, IFileTable fileTable, IHeap heap, ISemaphoreTable semaphoreTable) {
+        synchronized (PrgState.class) {
             this.id = nextId;
             nextId++;
         }
@@ -27,7 +27,7 @@ public class PrgState {
         this.output = output;
         this.fileTable = fileTable;
         this.heap = heap;
-        this.semaphoreTable = semahporeTable;
+        this.semaphoreTable = semaphoreTable;
         this.executionStack.push(statement);
     }
 
@@ -59,7 +59,7 @@ public class PrgState {
         return semaphoreTable;
     }
 
-    public boolean isNotCompleted(){
+    public boolean isNotCompleted() {
         return this.executionStack.size() > 0;
     }
 

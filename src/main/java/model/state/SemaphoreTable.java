@@ -75,7 +75,7 @@ public class SemaphoreTable implements ISemaphoreTable {
     }
 
     @Override
-    public List<Pair<Pair<Integer, Integer>, IGenericList<Integer>>> getSemaphoreDecitionaryAsList() {
+    public List<Pair<Pair<Integer, Integer>, IGenericList<Integer>>> getSemaphoreDictionaryAsList() {
         this.lock.lock();
         List<Pair<Pair<Integer, Integer>, IGenericList<Integer>>> answer = new ArrayList<>();
         this.semaphores.getMap().forEach((x, y) -> {
