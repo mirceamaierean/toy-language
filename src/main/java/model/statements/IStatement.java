@@ -9,6 +9,5 @@ public interface IStatement {
     PrgState execute(PrgState state) throws AppException;
 
     String toString();
-
     IGenericDictionary<String, IType> typecheck(IGenericDictionary<String, IType> typeDictionary) throws AppException;
 }

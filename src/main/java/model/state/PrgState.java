@@ -11,21 +11,28 @@ public class PrgState {
     IOutput output;
     IFileTable fileTable;
     IHeap heap;
+    IBarrierTable barrierTable;
 
 
-    public PrgState(IExecutionStack executionStack, ISymTable symTable, IOutput output, IStatement statement, IFileTable fileTable, IHeap heap) {
-        this.id = getId();
+
+    public PrgState(IExecutionStack executionStack, ISymTable symTable, IOutput output, IStatement statement, IFileTable fileTable, IHeap heap, IBarrierTable barrierTable) {
         this.executionStack = executionStack;
         this.symTable = symTable;
         this.output = output;
         this.executionStack.push(statement);
         this.fileTable = fileTable;
         this.heap = heap;
+        this.barrierTable = barrierTable;
+        this.id = setId();
     }
 
-    public synchronized int getId() {
+    public synchronized int setId() {
         nextId++;
         return nextId;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public IExecutionStack getExeStack() {
@@ -46,6 +53,30 @@ public class PrgState {
 
     public IHeap getHeap() {
         return heap;
+    }
+
+    public IBarrierTable getBarrierTable() {
+        return barrierTable;
+    }
+
+    public void setBarrierTable(IBarrierTable barrierTable) {
+        this.barrierTable = barrierTable;
+    }
+
+    public void setHeap(IHeap heap) {
+        this.heap = heap;
+    }
+
+    public void setFileTable(IFileTable fileTable) {
+        this.fileTable = fileTable;
+    }
+
+    public void setOutput(IOutput output) {
+        this.output = output;
+    }
+
+    public void setSymTable(ISymTable symTable) {
+        this.symTable = symTable;
     }
 
     public boolean isNotCompleted() {

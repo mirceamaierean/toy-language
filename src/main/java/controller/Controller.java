@@ -100,7 +100,7 @@ public class Controller implements IController {
     public void setProgram(IStatement statement) throws AppException {
         statement.typecheck(new GenericDictionary<>());
         this.repository.clear();
-        this.repository.add(new PrgState(new ExecutionStack(), new SymTable(), new Output(), statement, new FileTable(), new Heap()));
+        this.repository.add(new PrgState(new ExecutionStack(), new SymTable(), new Output(), statement, new FileTable(), new Heap(), new BarrierTable()));
         this.repository.logProgramState(this.repository.getProgramsList().get(0));
         if (this.displayFlag)
             this.displayCurrentState();
