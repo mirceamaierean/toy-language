@@ -29,13 +29,13 @@ public class Output implements IOutput {
 
     @Override
     public void appendToOutput(String string) {
-        this.data.add(string);
+        this.data.addToEnd(string);
     }
 
     @Override
     public void setOutput(String string) {
         this.data.clear();
-        this.data.add(string);
+        this.data.addToEnd(string);
     }
 
     @Override

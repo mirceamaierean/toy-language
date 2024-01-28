@@ -1,31 +1,34 @@
 package model.state;
 
+import controller.GarbageCollector;
 import model.exceptions.AppException;
 import model.statements.IStatement;
 
 public class PrgState {
+
     int id;
     static int nextId = 0;
     IExecutionStack executionStack;
     ISymTable symTable;
     IOutput output;
     IFileTable fileTable;
+
     IHeap heap;
 
+    ISemaphoreTable semaphoreTable;
 
-    public PrgState(IExecutionStack executionStack, ISymTable symTable, IOutput output, IStatement statement, IFileTable fileTable, IHeap heap) {
-        this.id = getId();
+    public PrgState(IExecutionStack executionStack, ISymTable symTable, IOutput output, IStatement statement, IFileTable fileTable, IHeap heap, ISemaphoreTable semahporeTable){
+        synchronized (PrgState.class){
+            this.id = nextId;
+            nextId++;
+        }
         this.executionStack = executionStack;
         this.symTable = symTable;
         this.output = output;
-        this.executionStack.push(statement);
         this.fileTable = fileTable;
         this.heap = heap;
-    }
-
-    public synchronized int getId() {
-        nextId++;
-        return nextId;
+        this.semaphoreTable = semahporeTable;
+        this.executionStack.push(statement);
     }
 
     public IExecutionStack getExeStack() {
@@ -48,17 +51,25 @@ public class PrgState {
         return heap;
     }
 
-    public boolean isNotCompleted() {
+    public int getId() {
+        return id;
+    }
+
+    public ISemaphoreTable getSemaphoreTable() {
+        return semaphoreTable;
+    }
+
+    public boolean isNotCompleted(){
         return this.executionStack.size() > 0;
     }
 
     @Override
     public String toString() {
-        return "Id: " + this.id + "\n" + this.executionStack.toString().strip() + "\n" + this.symTable.toString().strip() + "\n" + this.output.toString().strip() + "\n" + this.fileTable.toString().strip() + "\n" + this.heap.toString() + "\n";
+        return "Id: " + Integer.toString(this.id) + "\n" + this.executionStack.toString().strip() + "\n" + this.symTable.toString().strip() + "\n" + this.output.toString().strip() + "\n" + this.fileTable.toString().strip() + "\n" + this.heap.toString() + "\n" + this.semaphoreTable.toString().strip() + "\n";
     }
 
     public PrgState executeOneStep() throws AppException {
         IStatement statement = executionStack.pop();
         return statement.execute(this);
     }
-}
+};
