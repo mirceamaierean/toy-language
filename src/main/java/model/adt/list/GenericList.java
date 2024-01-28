@@ -11,6 +11,12 @@ public class GenericList<T> implements IGenericList<T>{
     }
 
     public GenericList(List<T> data) {
+        this.output = data;
+    }
+
+    @Override
+    public void add(T element) {
+        output.add(element);
         this.data = data;
     }
 
@@ -20,6 +26,12 @@ public class GenericList<T> implements IGenericList<T>{
     }
 
     @Override
+    public String toString() {
+        StringBuilder result = new StringBuilder();
+        for (T element : output) {
+            result.append(element.toString()).append("\n");
+        }
+        return "GenericList{" + "output = " + result + '}';
     public List<T> getAll() {
         return data;
     }
