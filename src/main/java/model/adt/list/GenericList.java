@@ -10,6 +10,10 @@ public class GenericList<T> implements IGenericList<T> {
         output = new LinkedList<>();
     }
 
+    public GenericList(List<T> data) {
+        this.output = data;
+    }
+
     @Override
     public void add(T element) {
         output.add(element);
@@ -26,9 +30,7 @@ public class GenericList<T> implements IGenericList<T> {
         for (T element : output) {
             result.append(element.toString()).append("\n");
         }
-        return "GenericList{" +
-                "output = " + result +
-                '}';
+        return "GenericList{" + "output = " + result + '}';
     }
 
     @Override
