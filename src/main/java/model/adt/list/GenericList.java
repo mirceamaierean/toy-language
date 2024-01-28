@@ -39,4 +39,8 @@ public class GenericList<T> implements IGenericList<T> {
     public void setOutput(List<T> output) {
         this.output = output;
     }
+
+    public int size() {
+        return output.size();
+    }
 }

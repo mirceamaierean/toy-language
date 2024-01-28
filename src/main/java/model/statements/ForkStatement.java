@@ -3,7 +3,9 @@ package model.statements;
 import model.adt.dictionary.IGenericDictionary;
 import model.exceptions.AppException;
 import model.state.ExecutionStack;
+import model.state.IExecutionStack;
 import model.state.PrgState;
+import model.values.IValue;
 import model.values.types.IType;
 
 public class ForkStatement implements IStatement {
@@ -15,7 +17,15 @@ public class ForkStatement implements IStatement {
 
     @Override
     public PrgState execute(PrgState state) throws AppException {
-        return new PrgState(new ExecutionStack(), state.getSymTable().copy(), state.getOutput(), innerStatement, state.getFileTable(), state.getHeap());
+        return new PrgState(
+                new ExecutionStack(),
+                state.getSymTable().copy(),
+                state.getOutput(),
+                innerStatement,
+                state.getFileTable(),
+                state.getHeap(),
+                state.getProcedureTable()
+        );
     }
 
     @Override

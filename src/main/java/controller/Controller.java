@@ -1,12 +1,18 @@
 package controller;
 
+import javafx.util.Pair;
 import model.adt.dictionary.GenericDictionary;
+import model.adt.dictionary.IGenericDictionary;
 import model.exceptions.AppException;
+import model.expressions.BinaryExpression;
+import model.expressions.VariableExpression;
 import model.state.*;
-import model.statements.IStatement;
-import model.statements.NoOperationStatement;
+import model.statements.*;
+import model.values.IValue;
+import model.values.types.IntegerType;
 import repository.IRepository;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.Callable;
@@ -100,7 +106,27 @@ public class Controller implements IController {
     public void setProgram(IStatement statement) throws AppException {
         statement.typecheck(new GenericDictionary<>());
         this.repository.clear();
-        this.repository.add(new PrgState(new ExecutionStack(), new SymTable(), new Output(), statement, new FileTable(), new Heap()));
+
+        IStatement f1 = new CompositeStatement(
+                new VariableDeclarationStatement("v", new IntegerType()),
+                new CompositeStatement(
+                        new AssignmentStatement("v", new BinaryExpression(new VariableExpression("a"), new VariableExpression("b"), "+")),
+                        new PrintStatement(new VariableExpression("v"))
+                )
+        );
+        IStatement f2 = new CompositeStatement(
+                new VariableDeclarationStatement("v", new IntegerType()),
+                new CompositeStatement(
+                        new AssignmentStatement("v", new BinaryExpression(new VariableExpression("a"), new VariableExpression("b"), "*")),
+                        new PrintStatement(new VariableExpression("v"))
+                )
+        );
+
+        ProcedureTable procedureTable = new ProcedureTable();
+        procedureTable.insert("sum", new Pair<>(Arrays.asList("a", "b"), f1));
+        procedureTable.insert("product", new Pair<>(Arrays.asList("a", "b"), f2));
+        SymTable symTable = new SymTable();
+        this.repository.add(new PrgState(new ExecutionStack(), new SymTable(), new Output(), statement, new FileTable(), new Heap(), procedureTable));
         this.repository.logProgramState(this.repository.getProgramsList().get(0));
         if (this.displayFlag)
             this.displayCurrentState();

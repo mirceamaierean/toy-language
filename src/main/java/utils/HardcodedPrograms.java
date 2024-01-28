@@ -14,6 +14,7 @@ import model.values.types.RefType;
 import model.values.types.StringType;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class HardcodedPrograms {
@@ -28,5 +29,40 @@ public class HardcodedPrograms {
             new CompositeStatement(new VariableDeclarationStatement("v",new RefType(new IntegerType())), new CompositeStatement(new NewStatement("v", new ConstantExpression(new IntegerValue(20))), new CompositeStatement(new VariableDeclarationStatement("a",new RefType(new RefType(new IntegerType()))), new CompositeStatement(new NewStatement("a", new VariableExpression("v")), new CompositeStatement(new NewStatement("v", new ConstantExpression(new IntegerValue(30))), new PrintStatement(new ReadHeapFunction(new ReadHeapFunction(new VariableExpression("a"))))))))),
             new CompositeStatement(new VariableDeclarationStatement("v",new IntegerType()), new CompositeStatement(new AssignmentStatement("v",new ConstantExpression(new IntegerValue(4))), new CompositeStatement(new WhileStatement(new BinaryExpression(new VariableExpression("v"),new ConstantExpression(new IntegerValue(0)),">"), new CompositeStatement(new PrintStatement(new VariableExpression("v")), new AssignmentStatement("v",new BinaryExpression(new VariableExpression("v"),new ConstantExpression(new IntegerValue(1)),"-")))), new PrintStatement(new VariableExpression("v"))))),
             new CompositeStatement(new VariableDeclarationStatement("v",new IntegerType()), new CompositeStatement(new VariableDeclarationStatement("a",new RefType(new IntegerType())), new CompositeStatement(new AssignmentStatement("v",new ConstantExpression(new IntegerValue(10))), new CompositeStatement(new NewStatement("a", new ConstantExpression(new IntegerValue(22))), new CompositeStatement(new ForkStatement(new CompositeStatement(new WriteHeapStatement(new VariableExpression("a"), new ConstantExpression(new IntegerValue(30))), new CompositeStatement(new AssignmentStatement("v",new ConstantExpression(new IntegerValue(32))), new CompositeStatement(new PrintStatement(new VariableExpression("v")), new PrintStatement(new ReadHeapFunction(new VariableExpression("a"))))))), new CompositeStatement(new PrintStatement(new VariableExpression("v")), new PrintStatement(new ReadHeapFunction(new VariableExpression("a"))))))))),
-            new CompositeStatement(new VariableDeclarationStatement("a", new RefType(new IntegerType())), new CompositeStatement(new VariableDeclarationStatement("count", new IntegerType()), new WhileStatement(new BinaryExpression(new VariableExpression("count"), new ConstantExpression(new IntegerValue(10)), "<"), new CompositeStatement(new ForkStatement(new ForkStatement(new CompositeStatement(new NewStatement("a", new VariableExpression("count")), new PrintStatement(new ReadHeapFunction(new VariableExpression("a")))))), new AssignmentStatement("count", new BinaryExpression(new VariableExpression("count"), new ConstantExpression(new IntegerValue(1)), "+"))))))));
+            new CompositeStatement(new VariableDeclarationStatement("a", new RefType(new IntegerType())), new CompositeStatement(new VariableDeclarationStatement("count", new IntegerType()), new WhileStatement(new BinaryExpression(new VariableExpression("count"), new ConstantExpression(new IntegerValue(10)), "<"), new CompositeStatement(new ForkStatement(new ForkStatement(new CompositeStatement(new NewStatement("a", new VariableExpression("count")), new PrintStatement(new ReadHeapFunction(new VariableExpression("a")))))), new AssignmentStatement("count", new BinaryExpression(new VariableExpression("count"), new ConstantExpression(new IntegerValue(1)), "+")))))),
+            new CompositeStatement(
+                    new VariableDeclarationStatement("v", new IntegerType()),
+                    new CompositeStatement(
+                            new VariableDeclarationStatement("w", new IntegerType()),
+                            new CompositeStatement(
+                                    new AssignmentStatement("v", new ConstantExpression(new IntegerValue(2))),
+                                    new CompositeStatement(
+                                            new AssignmentStatement("w", new ConstantExpression(new IntegerValue(5))),
+                                            new CompositeStatement(
+                                                    new CallStatement("sum", new ArrayList<>(Arrays.asList(
+                                                            new BinaryExpression(new VariableExpression("v"), new ConstantExpression(new IntegerValue(10)), "*"),
+                                                            new VariableExpression("w")
+                                                    ))),
+                                                    new CompositeStatement(
+                                                            new PrintStatement(new VariableExpression("v")),
+                                                            new CompositeStatement(
+                                                                    new ForkStatement(
+                                                                            new CallStatement("product", new ArrayList<>(Arrays.asList(
+                                                                                    new VariableExpression("v"),
+                                                                                    new VariableExpression("w")
+                                                                            )))
+                                                                    ),
+                                                                    new ForkStatement(
+                                                                            new CallStatement("sum", new ArrayList<>(Arrays.asList(
+                                                                                    new VariableExpression("v"),
+                                                                                    new VariableExpression("w")
+                                                                            )))
+                                                                    )
+                                                            )
+                                                    )
+                                            )
+                                    )
+                            )
+                    )
+            )));
 }

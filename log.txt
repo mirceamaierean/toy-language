@@ -5492,3 +5492,2226 @@ Heap:
 2(RefType IntegerType):-> Ref(1,IntegerType)
 
 
+Id: 1
+Execution stack:
+IntegerType v; IntegerType w; v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 1
+Execution stack:
+IntegerType v
+IntegerType w; v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 1
+Execution stack:
+IntegerType w; v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 1
+Execution stack:
+IntegerType w
+v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 1
+Execution stack:
+v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 0
+w(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 1
+Execution stack:
+v = 2
+w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 0
+w(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 1
+Execution stack:
+w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 1
+Execution stack:
+w = 5
+call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 1
+Execution stack:
+call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 1
+Execution stack:
+call sum((v * 10), w)
+print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 2
+Execution stack:
+NOP
+SymTable:
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 2
+Execution stack:
+NOP
+SymTable:
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 2
+Execution stack:
+SymTable:
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 1
+Execution stack:
+IntegerType v; IntegerType w; v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 1
+Execution stack:
+IntegerType v
+IntegerType w; v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 1
+Execution stack:
+IntegerType w; v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 1
+Execution stack:
+IntegerType w
+v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 1
+Execution stack:
+v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 0
+w(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 1
+Execution stack:
+v = 2
+w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 0
+w(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 1
+Execution stack:
+w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 1
+Execution stack:
+w = 5
+call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 1
+Execution stack:
+call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 1
+Execution stack:
+call sum((v * 10), w)
+print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 2
+Execution stack:
+NOP
+SymTable:
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 2
+Execution stack:
+NOP
+SymTable:
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 1
+Execution stack:
+IntegerType v; IntegerType w; v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 1
+Execution stack:
+IntegerType v
+IntegerType w; v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 1
+Execution stack:
+IntegerType w; v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 1
+Execution stack:
+IntegerType w
+v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 1
+Execution stack:
+v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 0
+w(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 1
+Execution stack:
+v = 2
+w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 0
+w(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 1
+Execution stack:
+w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 1
+Execution stack:
+w = 5
+call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 1
+Execution stack:
+call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 1
+Execution stack:
+call sum((v * 10), w)
+print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 2
+Execution stack:
+NOP
+SymTable:
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 2
+Execution stack:
+NOP
+SymTable:
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 2
+Execution stack:
+SymTable:
+Output:
+Filetable:
+Heap:
+
+
+
+
+Id: 1
+Execution stack:
+IntegerType v; IntegerType w; v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+IntegerType v
+IntegerType w; v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+IntegerType w; v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+IntegerType w
+v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 0
+w(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+v = 2
+w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 0
+w(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+w = 5
+call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+call sum((v * 10), w)
+print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 2
+Execution stack:
+NOP
+SymTable:
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 2
+Execution stack:
+NOP
+SymTable:
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 2
+Execution stack:
+SymTable:
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+IntegerType v; IntegerType w; v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+IntegerType v
+IntegerType w; v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+IntegerType w; v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+IntegerType w
+v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 0
+w(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+v = 2
+w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 0
+w(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+w = 5
+call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+call sum((v * 10), w)
+print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 2
+Execution stack:
+NOP
+SymTable:
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 2
+Execution stack:
+NOP
+SymTable:
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+IntegerType v; IntegerType w; v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+IntegerType v
+IntegerType w; v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+IntegerType w; v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+IntegerType w
+v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 0
+w(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+v = 2
+w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 0
+w(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+w = 5
+call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+call sum((v * 10), w)
+print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 2
+Execution stack:
+NOP
+SymTable:
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 2
+Execution stack:
+NOP
+SymTable:
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+IntegerType v; IntegerType w; v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+IntegerType v
+IntegerType w; v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+IntegerType w; v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+IntegerType w
+v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 0
+w(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+v = 2
+w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 0
+w(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+w = 5
+call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+call sum((v * 10), w)
+print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+IntegerType v; v = (a + b); print(v)
+return
+print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+
+SymTable:
+a(IntegerType):-> 20
+b(IntegerType):-> 5
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+IntegerType v
+v = (a + b); print(v)
+return
+print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+
+SymTable:
+a(IntegerType):-> 20
+b(IntegerType):-> 5
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+v = (a + b); print(v)
+return
+print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+
+SymTable:
+a(IntegerType):-> 20
+b(IntegerType):-> 5
+v(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+v = (a + b)
+print(v)
+return
+print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+
+SymTable:
+a(IntegerType):-> 20
+b(IntegerType):-> 5
+v(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+print(v)
+return
+print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+
+SymTable:
+a(IntegerType):-> 20
+b(IntegerType):-> 5
+v(IntegerType):-> 25
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+return
+print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+
+SymTable:
+a(IntegerType):-> 20
+b(IntegerType):-> 5
+v(IntegerType):-> 25
+Output:
+25
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+25
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+print(v)
+fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+25
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+25
+2
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+fork(call product(v, w))
+fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+25
+2
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+25
+2
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 2
+Execution stack:
+call product(v, w)
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+25
+2
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+25
+2
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 2
+Execution stack:
+IntegerType v; v = (a * b); print(v)
+return
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+
+SymTable:
+a(IntegerType):-> 2
+b(IntegerType):-> 5
+Output:
+25
+2
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 3
+Execution stack:
+call sum(v, w)
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+25
+2
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 2
+Execution stack:
+IntegerType v
+v = (a * b); print(v)
+return
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+
+SymTable:
+a(IntegerType):-> 2
+b(IntegerType):-> 5
+Output:
+25
+2
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 3
+Execution stack:
+IntegerType v; v = (a + b); print(v)
+return
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+
+SymTable:
+a(IntegerType):-> 2
+b(IntegerType):-> 5
+Output:
+25
+2
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+IntegerType v; IntegerType w; v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+IntegerType v
+IntegerType w; v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+IntegerType w; v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+IntegerType w
+v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+v = 2; w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 0
+w(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+v = 2
+w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 0
+w(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+w = 5; call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+w = 5
+call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+call sum((v * 10), w); print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+call sum((v * 10), w)
+print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+IntegerType v; v = (a + b); print(v)
+return
+print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+
+SymTable:
+a(IntegerType):-> 20
+b(IntegerType):-> 5
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+IntegerType v
+v = (a + b); print(v)
+return
+print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+
+SymTable:
+a(IntegerType):-> 20
+b(IntegerType):-> 5
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+v = (a + b); print(v)
+return
+print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+
+SymTable:
+a(IntegerType):-> 20
+b(IntegerType):-> 5
+v(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+v = (a + b)
+print(v)
+return
+print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+
+SymTable:
+a(IntegerType):-> 20
+b(IntegerType):-> 5
+v(IntegerType):-> 0
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+print(v)
+return
+print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+
+SymTable:
+a(IntegerType):-> 20
+b(IntegerType):-> 5
+v(IntegerType):-> 25
+Output:
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+return
+print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+
+SymTable:
+a(IntegerType):-> 20
+b(IntegerType):-> 5
+v(IntegerType):-> 25
+Output:
+25
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+print(v); fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+25
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+print(v)
+fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+25
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+fork(call product(v, w)); fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+25
+2
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+fork(call product(v, w))
+fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+25
+2
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+fork(call sum(v, w))
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+25
+2
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 2
+Execution stack:
+call product(v, w)
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+25
+2
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 1
+Execution stack:
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+25
+2
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 2
+Execution stack:
+IntegerType v; v = (a * b); print(v)
+return
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+
+SymTable:
+a(IntegerType):-> 2
+b(IntegerType):-> 5
+Output:
+25
+2
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 3
+Execution stack:
+call sum(v, w)
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+25
+2
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 2
+Execution stack:
+IntegerType v
+v = (a * b); print(v)
+return
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+
+SymTable:
+a(IntegerType):-> 2
+b(IntegerType):-> 5
+Output:
+25
+2
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 3
+Execution stack:
+IntegerType v; v = (a + b); print(v)
+return
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+
+SymTable:
+a(IntegerType):-> 2
+b(IntegerType):-> 5
+Output:
+25
+2
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 2
+Execution stack:
+v = (a * b); print(v)
+return
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+
+SymTable:
+a(IntegerType):-> 2
+b(IntegerType):-> 5
+v(IntegerType):-> 0
+Output:
+25
+2
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 3
+Execution stack:
+IntegerType v
+v = (a + b); print(v)
+return
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+
+SymTable:
+a(IntegerType):-> 2
+b(IntegerType):-> 5
+Output:
+25
+2
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 2
+Execution stack:
+v = (a * b)
+print(v)
+return
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+
+SymTable:
+a(IntegerType):-> 2
+b(IntegerType):-> 5
+v(IntegerType):-> 0
+Output:
+25
+2
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 3
+Execution stack:
+v = (a + b); print(v)
+return
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+
+SymTable:
+a(IntegerType):-> 2
+b(IntegerType):-> 5
+v(IntegerType):-> 0
+Output:
+25
+2
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 2
+Execution stack:
+print(v)
+return
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+
+SymTable:
+a(IntegerType):-> 2
+b(IntegerType):-> 5
+v(IntegerType):-> 10
+Output:
+25
+2
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 3
+Execution stack:
+v = (a + b)
+print(v)
+return
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+
+SymTable:
+a(IntegerType):-> 2
+b(IntegerType):-> 5
+v(IntegerType):-> 0
+Output:
+25
+2
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 2
+Execution stack:
+return
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+
+SymTable:
+a(IntegerType):-> 2
+b(IntegerType):-> 5
+v(IntegerType):-> 10
+Output:
+25
+2
+10
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 3
+Execution stack:
+print(v)
+return
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+
+SymTable:
+a(IntegerType):-> 2
+b(IntegerType):-> 5
+v(IntegerType):-> 7
+Output:
+25
+2
+10
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 2
+Execution stack:
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+25
+2
+10
+7
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 3
+Execution stack:
+return
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+
+SymTable:
+a(IntegerType):-> 2
+b(IntegerType):-> 5
+v(IntegerType):-> 7
+Output:
+25
+2
+10
+7
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
+Id: 3
+Execution stack:
+SymTable:
+v(IntegerType):-> 2
+w(IntegerType):-> 5
+Output:
+25
+2
+10
+7
+Filetable:
+Heap:
+
+product - [a, b]: IntegerType v; v = (a * b); print(v)
+sum - [a, b]: IntegerType v; v = (a + b); print(v)
+
+
+
