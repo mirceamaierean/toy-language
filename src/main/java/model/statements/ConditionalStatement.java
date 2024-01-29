@@ -40,13 +40,9 @@ public class ConditionalStatement implements IStatement{
     @Override
     public IGenericDictionary<String, IType> typecheck(IGenericDictionary<String, IType> typeEnv) throws AppException {
         IType typeVariable = typeEnv.lookup(variable);
-        IType typeCondition = condition.typecheck(typeEnv);
-        IType typeTrueBranch = trueBranch.typecheck(typeEnv);
-        IType typeFalseBranch = falseBranch.typecheck(typeEnv);
-        // Because the heap accesses the memory directly, RefType type checks cannot happen at compile time.
-        // We need to trust the programmer that what is at the heap at the
-        // address that is evaluated from the expression is of the correct type
-        // at runtime, otherwise an error will occur.
+        IType typeCondition = condition.typecheck(typeEnv.copy());
+        IType typeTrueBranch = trueBranch.typecheck(typeEnv.copy());
+        IType typeFalseBranch = falseBranch.typecheck(typeEnv.copy());
 
         // if the type of the condition is not boolean, then throw an error
         System.out.println(typeCondition);
