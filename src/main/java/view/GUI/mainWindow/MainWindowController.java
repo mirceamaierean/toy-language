@@ -100,13 +100,18 @@ public class MainWindowController {
 
         try {
             if (index >= 0) {
-                currentProgram = this.controller.getPrgStates().get(index);
-                currentProgram.getSymTable().getMap().forEach((x, y) -> this.symTableTableView.getItems().add(new Pair<>(x, y)));
-                List<IStatement> statementList = currentProgram.getExeStack().toList();
-                for (int i = statementList.size() - 1; i >= 0; i--) {
-                    this.executionStackListView.getItems().add(statementList.get(i).toString());
+                try {
+                    currentProgram = this.controller.getPrgStates().get(index);
+                    currentProgram.getSymTable().getMap().forEach((x, y) -> this.symTableTableView.getItems().add(new Pair<>(x, y)));
+                    List<IStatement> statementList = currentProgram.getExeStack().toList();
+                    for (int i = statementList.size() - 1; i >= 0; i--) {
+                        this.executionStackListView.getItems().add(statementList.get(i).toString());
+                    }
+                    this.progStatesListView.getSelectionModel().select(index);
                 }
-                this.progStatesListView.getSelectionModel().select(index);
+                catch (IndexOutOfBoundsException e) {
+                    this.progStatesListView.getSelectionModel().select(0);
+                }
             }
         } catch (NoSuchElementException ignored) {
         } finally {

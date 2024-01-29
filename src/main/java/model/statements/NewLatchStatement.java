@@ -35,6 +35,13 @@ public class NewLatchStatement implements IStatement {
             throw new AppException(String.format("Expression '%s' should have evaluate to an integer", expression.toString()));
         }
 
+
+        // if expression value is smaller than 0 then print an error and stop the execution
+        if (((IntegerValue) expressionValue).getValue() < 0) {
+            PrgState.lock.unlock();
+            throw new AppException(String.format("Expression '%s' should have evaluate to a positive integer", expression.toString()));
+        }
+
         // LatchTable2 = LatchTable1 synchronizedUnion {newfreelocation ->num1}
         int latch = ((IntegerValue) expressionValue).getValue();
         int latchLocation = state.getLatchTable().put(latch);
