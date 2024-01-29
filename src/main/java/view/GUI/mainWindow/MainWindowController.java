@@ -7,10 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.util.Pair;
 import model.exceptions.AppException;
-import model.state.IFileTable;
-import model.state.IHeap;
-import model.state.IOutput;
-import model.state.PrgState;
+import model.state.*;
 import model.statements.IStatement;
 import model.values.IValue;
 
@@ -22,6 +19,7 @@ public class MainWindowController {
     IHeap currentHeap;
     IOutput currentOut;
     IFileTable currentFileTable;
+    ILatchTable currentLatchTable;
     @FXML
     private Label progStatesLabel;
     @FXML
@@ -43,6 +41,12 @@ public class MainWindowController {
     @FXML
     private TableColumn<Pair<String, IValue>, String> symbolValueColumn;
     @FXML
+    private TableView<Pair<Integer, Integer>> latchTableView;
+    @FXML
+    private TableColumn<Pair<Integer, Integer>, String> latchTableLocation;
+    @FXML
+    private TableColumn<Pair<Integer, Integer>, String> latchTableValue;
+    @FXML
     private ListView<String> executionStackListView;
     @FXML
     private Button stepButton;
@@ -53,7 +57,6 @@ public class MainWindowController {
         this.controller = controller;
     }
 
-    //TODO after run or last step the programs are removed so nothing is displayed anymore
     public void refresh() {
         int index = this.progStatesListView.getSelectionModel().getSelectedIndex();
 
@@ -63,6 +66,7 @@ public class MainWindowController {
         this.fileTableListView.getItems().clear();
         this.symTableTableView.getItems().clear();
         this.executionStackListView.getItems().clear();
+        this.latchTableView.getItems().clear();
 
         this.progStatesLabel.setText("Program states: " + this.controller.getPrgStates().size());
         for (int i = 0; i < this.controller.getPrgStates().size(); ++i)
@@ -72,6 +76,7 @@ public class MainWindowController {
             this.currentHeap = this.controller.getPrgStates().get(0).getHeap();
             this.currentOut = this.controller.getPrgStates().get(0).getOutput();
             this.currentFileTable = this.controller.getPrgStates().get(0).getFileTable();
+            this.currentLatchTable = this.controller.getPrgStates().get(0).getLatchTable();
         }
         if (this.currentHeap != null) {
             this.currentHeap.getMap().forEach((x, y) -> this.heapTableTableView.getItems().add(new Pair<>(x, y)));
@@ -85,6 +90,10 @@ public class MainWindowController {
             this.currentFileTable.getFileList().forEach(x -> {
                 this.fileTableListView.getItems().add(x);
             });
+        }
+
+        if (this.currentLatchTable != null) {
+            this.currentLatchTable.getMap().forEach((x, y) -> this.latchTableView.getItems().add(new Pair<>(x, y)));
         }
 
         PrgState currentProgram;
@@ -107,6 +116,7 @@ public class MainWindowController {
             this.fileTableListView.refresh();
             this.symTableTableView.refresh();
             this.executionStackListView.refresh();
+            this.latchTableView.refresh();
         }
     }
 
@@ -116,6 +126,8 @@ public class MainWindowController {
         this.heapValueColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getValue().toString()));
         this.symbolNameColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getKey()));
         this.symbolValueColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getValue().toString()));
+        this.latchTableLocation.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getKey().toString()));
+        this.latchTableValue.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getValue().toString()));
         this.refresh();
         this.runButton.setOnAction(actionEvent -> {
             try {

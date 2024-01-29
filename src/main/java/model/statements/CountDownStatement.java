@@ -25,17 +25,12 @@ public class CountDownStatement implements IStatement {
         if (!variableValue.getType().equals(new IntegerType()))
             throw new AppException(String.format("Variable '%s' should be of integer type", variableName));
 
-        PrgState.lock.lock();
 
         // latchLocation = lookup(symbolTable,var)
-        Integer latchLocation = ((IntegerValue) variableValue).getValue();
-        Integer latchValue = state.getLatchTable().get(latchLocation);
+        int latchLocation = ((IntegerValue) variableValue).getValue();
+        int latchValue = state.getLatchTable().get(latchLocation);
 
-        // if latchLocation is not an index in the LatchTable then
-        if (latchValue == null) {
-            PrgState.lock.unlock();
-            throw new AppException("Invalid latch table location!");
-        }
+        PrgState.lock.lock();
         // if LatchTable[latchLocation] > 0 then
         if (latchValue > 0)
             // LatchTable[latchLocation]=LatchTable[latchLocation]-1;
@@ -64,11 +59,6 @@ public class CountDownStatement implements IStatement {
 
         return typeTable;
     }
-
-//    @Override
-//    public Statement deepCopy() {
-//        return new CountDownStatement(variableName);
-//    }
 
     @Override
     public String toString() {

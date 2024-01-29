@@ -21,23 +21,20 @@ public class AwaitLatchStatement implements IStatement {
         // if var is not in symbol table, or it has not the type int then print an error message and terminate the execution.
         if (variableValue == null)
             throw new AppException(String.format("Variable %s has not been declared!", variableName));
+
         if (!variableValue.getType().equals(new IntegerType()))
             throw new AppException(String.format("Variable %s should be of integer type!", variableName));
 
         // latchLocation = lookup(symbolTable,var)
         int latchLocation = ((IntegerValue) variableValue).getValue();
-        Integer latchValue = state.getLatchTable().get(latchLocation);
+
+        //check for latchValue, if it does not exist, then an error is thrown and the execution is stopped
+        int latchValue = state.getLatchTable().get(latchLocation);
 
         PrgState.lock.lock();
-
-        // if latchLocation is not an index in the LatchTable then
-        if (latchValue == null) {
-            PrgState.lock.unlock();
-            throw new AppException("Invalid latch table location!");
-        }
         // if LatchTable[latchLocation] != 0 then
         if (latchValue != 0)
-            // push back the await statement(that means the current program state must wait for the countdownlatch to reach zero)
+            // push back the await statement(that means the current program state must wait for the countDownLatch to reach zero)
             state.getExeStack().push(this);
 
         PrgState.lock.unlock();
@@ -56,10 +53,6 @@ public class AwaitLatchStatement implements IStatement {
         return typeTable;
     }
 
-//    @Override
-//    public Statement deepCopy() {
-//        return new LatchAwaitStatement(variableName);
-//    }
 
     @Override
     public String toString() {

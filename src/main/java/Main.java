@@ -13,7 +13,7 @@ public class Main {
         String line = "log.txt";
 
         IRepository repository = new Repository(line);
-        IController controller = new Controller(repository, Executors.newFixedThreadPool(2),true);
+        IController controller = new Controller(repository, Executors.newFixedThreadPool(2),false);
         view.GUI.MainView.setController(controller);
         IMainView view = new view.GUI.MainView();
 //        //IMainView view = new view.CLI.MainView(controller);

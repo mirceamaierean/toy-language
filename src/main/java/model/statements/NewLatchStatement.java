@@ -12,12 +12,12 @@ import model.values.types.IntegerType;
 
 /**
  * NewLatchStatement creates a new countdownlatch into the LatchTable
- * */
+ */
 public class NewLatchStatement implements IStatement {
     private String variableName;
     private IExpression expression;
 
-    public NewLatchStatement(String variableName, IExpression expression){
+    public NewLatchStatement(String variableName, IExpression expression) {
         this.variableName = variableName;
         this.expression = expression;
     }
@@ -38,9 +38,10 @@ public class NewLatchStatement implements IStatement {
         // LatchTable2 = LatchTable1 synchronizedUnion {newfreelocation ->num1}
         int latch = ((IntegerValue) expressionValue).getValue();
         int latchLocation = state.getLatchTable().put(latch);
-        IValue variableValue = state.getSymTable().getValue(variableName);
-
-        if (variableValue == null) {
+        IValue variableValue = null;
+        try {
+            variableValue = state.getSymTable().getValue(variableName);
+        } catch (AppException e) {
             PrgState.lock.unlock();
             throw new AppException(String.format("Variable '%s' has not been declared", variableName));
         }
@@ -59,12 +60,15 @@ public class NewLatchStatement implements IStatement {
     @Override
     public IGenericDictionary<String, IType> typecheck(IGenericDictionary<String, IType> typeEnv) throws AppException {
         IType variableType = typeEnv.getMap().get(variableName);
-        if (variableName == null)
+
+        if (variableType == null)
             throw new AppException(String.format("Variable '%s' has not been declared", variableName));
+
         if (!variableType.equals(new IntegerType()))
             throw new AppException(String.format("Variable '%s' should be of integer type", variableName));
 
         IType expressionType = expression.typecheck(typeEnv);
+
         if (!expressionType.equals(new IntegerType()))
             throw new AppException(String.format("Expression '%s' should be of integer type", expressionType));
 

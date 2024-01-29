@@ -11,7 +11,6 @@ public class LatchTable extends GenericDictionary<Integer, Integer> implements I
         super();
         this.nextFreeLocation = 1;
     }
-
     @Override
     public void put(Integer key, Integer value) throws AppException {
         if (!key.equals(nextFreeLocation))
@@ -51,9 +50,10 @@ public class LatchTable extends GenericDictionary<Integer, Integer> implements I
     @Override
     public String toString() {
         StringBuilder answer = new StringBuilder();
+        answer.append("LatchTable:\n");
         for (Integer key : this.getMap().keySet()) {
             answer.append(key.toString());
-            answer.append(" -> ");
+            answer.append(":-> ");
             answer.append(this.getMap().get(key).toString());
             answer.append("\n");
         }
