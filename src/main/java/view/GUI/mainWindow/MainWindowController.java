@@ -99,8 +99,9 @@ public class MainWindowController {
                 }
                 this.progStatesListView.getSelectionModel().select(index);
             }
-        } catch (NoSuchElementException ignored) {
-        } finally {
+        } catch (NoSuchElementException | IndexOutOfBoundsException ignored) {
+        }
+        finally {
             this.progStatesListView.refresh();
             this.heapTableTableView.refresh();
             this.outListView.refresh();
